@@ -8,12 +8,11 @@ export async function fetchBookByCategory(categoryName) {
     const queryUrl = `${URL}?category=${categoryName}`;
     const url = await fetch(queryUrl);
     const jsonData = await url.json();
-    console.log(jsonData);
+
     return jsonData;
+    
   } catch (error) {
     warningNotify();
     console.log(error.message);
   }
-}
-
-fetchBookByCategory('Graphic Books and Manga');
+};

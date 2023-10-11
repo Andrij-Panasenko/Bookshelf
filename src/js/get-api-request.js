@@ -7,8 +7,9 @@ export async function fetchTopBooks() {
   try {
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data);
+
     return data;
+    
   } catch (error) {
     warningNotify();
     console.log(error.message);
