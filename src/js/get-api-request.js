@@ -1,3 +1,4 @@
+import { warningNotify } from "./notify";
 
 //функція повертає масив об'єктів top-books. 
 export async function fetchTopBooks() {
@@ -9,7 +10,7 @@ export async function fetchTopBooks() {
     console.log(data);
     return data;
   } catch (error) {
+    warningNotify();
     console.log(error.message);
   }
 }
-fetchTopBooks();
