@@ -1,10 +1,10 @@
-import { warningNotify } from "./notify";
+import { warningNotify } from "../notify";
 
 //функція повертає масив об'єктів з назвами категорій книжок
 export async function fetchCatrgoryList() {
-  const URL = 'https://books-backend.p.goit.global/books/category-list';
+  const BASE_URL = 'https://books-backend.p.goit.global/books/category-list';
   try {
-    const reponse = await fetch(URL);
+    const reponse = await fetch(BASE_URL);
     
     if (!reponse.ok) {
       warningNotify();
@@ -16,6 +16,5 @@ export async function fetchCatrgoryList() {
 
   } catch (error) {
     warningNotify();
-    console.log(error.mesage);
   }
 }
