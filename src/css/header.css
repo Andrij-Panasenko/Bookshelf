@@ -1,0 +1,34 @@
+@media screen and (max-width: 767px) {
+    .header-menu {
+        display: none;
+    }
+    
+}
+.header-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 64 px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0px;
+    
+}
+.page-header {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1.5px solid #111111;
+    
+    border-radius: 0px 0px 8px 8px;
+}
+.mobile-menu-open {
+    margin-left: 14px;
+}
+.header-wrap-button {
+    display: flex;
+}
+
+
+@media screen and (min-width: 428px)
