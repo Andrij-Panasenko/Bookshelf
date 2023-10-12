@@ -110,20 +110,26 @@
         <!-- ----- Sidebar ----- -->
         <aside class="">
           <!-- ----- All categories ----- -->
-          <load src=""/>
-        
-          <!-- ----- Support Ukraine -----  -->
-          <load src=""/>
-        </aside>
-        
-        <!-- ----- Main section ----- -->
-        <section class="">
-          <load src=""/>
-          <load src=""/>
-        </section>
+          <div class="backdrop-pop-up is-hidden" data-pop-up>
+  <div class="modal-pop-up">
+    <button
+      type="button"
+      class="close-button"
+      data-pop-up-close
+      aria-label="Close"
+    >
+      <svg class="close-button__icon" width="18" height="18">
+        <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-x-close"></use>
+      </svg>
+    </button>
 
-      </div>
-    </main>
+    <div class="modal-pop-up-content"></div>
+
+    <button type="button" class="modal-pop-up-btn button">
+      Add to shopping list
+    </button>
+  </div>
+</div>
 
     
   </body>
