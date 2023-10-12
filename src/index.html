@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Bookshelf</title>
+    <!-- Додайте необхідні метатеги, посилання на стилі, скрипти та інші ресурси -->
   </head>
   <body>
-    <!-- header -->
-    <load src=""></load>
-    <script type="module" src="./main.js"></script>
+    <ul id="categoryList"></ul>
+
+
+
+
+    <div class="home-container">
+  <h2 class="main-title">
+    Best Seller
+    <span class="main-title--last-word-static">Books</span>
+  </h2>
+  <div class="content-rendering-container">
+    <!-- >>>>>>>> html inserted with bestsellers.js <<<<<<<< -->
+</div>
+</div>
+
+    <script src="./main.js"></script>
+    <script type="module" src="./js/BestSeller.js/bestsellers.js"></script>
+    <script type="module" src="./js/BestSeller.js/fetchBooks.js"></script>
+    <script type="module" src="./js/BestSeller.js/seeMore.js"></script>
   </body>
 </html>
