@@ -3,3 +3,12 @@
 
 /* common css */
 @import url('./common.css');
+
+/* common shopping_list */
+@import url('./shopping_list.css');
+
+/* common  root */
+@import url('./root.css');
+
+/* common  reset */
+@import url('./reset.css');
