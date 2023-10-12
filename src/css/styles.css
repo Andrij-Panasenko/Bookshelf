@@ -5,4 +5,13 @@
 @import url('./common.css');
 
 /* Header */
-@import url('./header.css')
+@import url('./header.css');
+
+/* common shopping_list */
+@import url('./shopping_list.css');
+
+/* common  root */
+@import url('./root.css');
+
+/* common  reset */
+@import url('./reset.css');
