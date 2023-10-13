@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #rgba(17, 17, 17, 0.4);
+  background-color: rgba(17, 17, 17, 0.4);
   opacity: 1;
   cursor: pointer;
   z-index: 20;
@@ -63,9 +63,60 @@
   fill: var(--primary-accent-color);
 }
 
+.modal-pop-up-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 14px 20px;
+  min-width: 210px;
+  height: 46px;
+
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+}
+
+/* Book card */
+
+.modal-pop-up-content {
+}
+
+.modal-book-attributes {
+}
+
+.modal-img {
+}
+
+.modal-book-title {
+}
+
+.modal-book-author {
+}
+
+.modal-book-desc {
+}
+
+.modal-shops {
+}
+
+.modal-shop-img {
+}
+
+.amazon {
+}
+
+.book-shop {
+}
+
+.modal-message {
+}
+
 /* Tablet and desktop */
 
-@media screen (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .modal-pop-up {
     max-width: 579px;
     min-height: 465px;
@@ -78,9 +129,42 @@
     width: 28px;
     height: 28px;
   }
-}
 
-.close-button_-icon {
-  width: 21px;
-  height: 21px;
+  .close-button__icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .modal-pop-up-content {
+  }
+
+  .modal-book-attributes {
+  }
+
+  .modal-img {
+  }
+
+  .modal-book-title {
+  }
+
+  .modal-book-author {
+  }
+
+  .modal-book-desc {
+  }
+
+  .modal-shops {
+  }
+
+  .modal-shop-img {
+  }
+
+  .amazon {
+  }
+
+  .book-shop {
+  }
+
+  .modal-message {
+  }
 }
