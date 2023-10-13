@@ -29,10 +29,16 @@
   color: var(--header-background-color);
 }
 
+.slider-container {
+  overflow: hidden;
+  height: 340px;
+}
+
 .organization-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease;
 }
 
 .organization-container li {
