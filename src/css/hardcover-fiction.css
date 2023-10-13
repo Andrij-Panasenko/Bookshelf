@@ -3,13 +3,6 @@ ul{
     padding: 0;
     list-style: none;
 }
-
-.container{
-    max-width: 374.9px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-}
-
 .category-title{
     max-width: 320px;
     letter-spacing: -.04em;
