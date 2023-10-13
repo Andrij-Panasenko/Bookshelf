@@ -6,12 +6,11 @@
     background-color: rgba(79, 46, 232, 0.30);
     border: none;
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     outline: none;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-    transition: opacity var(--transition), box-shadow var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,8 +20,8 @@
     background-color: var(--primary-accent-color);
     border: none;
     border-radius: 50%;
-    width: 54px;
-    height: 54px;
+    min-width: 40px;
+    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,10 +35,37 @@
     opacity: 0;
 }
 
-.scroll-up-btn:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
 .scroll-up-svg{
     fill: var(--header-background-color);
+}
+
+@media screen and (min-width: 768px){
+    .scroll-up-btn{
+        width: 56px;
+        height: 56px;
+    }
+
+    .inner-ellipse{
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+}
+
+@media screen and (min-width: 1440px){
+    .scroll-up-btn{
+        width: 64px;
+        height: 64px;
+        transition: opacity var(--transition), box-shadow var(--transition);
+    }
+
+    .inner-ellipse{
+        min-width: 54px;
+        min-height: 54px;
+    }
+
+    .scroll-up-btn:hover,
+    .scroll-up-btn:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
 }
