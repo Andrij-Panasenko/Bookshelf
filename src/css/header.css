@@ -43,20 +43,20 @@ button {
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
+    background-color: var(--header-background-color, #FFFFFF);
     
 }
 .page-header {
     margin-left: auto;
     margin-right: auto;
-    
-    border-bottom: 1.5px solid #111111;
+    border: 1.5px solid #111111;
     
     border-radius: 0px 0px 8px 8px;
 }
 .mobile-menu-open {
     margin-left: 14px;
     padding: 0px 0px;
-    background-color: #FFFFFF;
+    background-color: var(--header-background-color, #FFFFFF);
     border: 0;
 }
 .header-wrap-button {
@@ -65,18 +65,24 @@ button {
 }
 
 .mobile-menu-open-icon {
-    background-color: #FFFFFF;
-    stroke:#111111;
+    background-color: var(--header-background-color,  #FFFFFF);
+    stroke: var(--main-text-color, #111111);
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-open-icon:focus,
+.mobile-menu-open-icon:hover {
+  stroke: var(--primary-accent-color,  #4F2EE8);
 }
 
 .header-menu-home {
     width: 72px;
     height: 34px;
     border-radius: 36px;
-    background: #EAC645;
+    background: var(--secondary-accent-color, #EAC645);
     display: flex;
 padding: 8px 16px;
-align-items: flex-start;
+align-items: center;
+justify-content: center;
 gap: 10px;
 }
 
@@ -117,7 +123,7 @@ gap: 10px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: white;
+    background: var(--header-background-color, #FFFFFF);
   }
   .slider.round {
     border-radius: 34px;
@@ -166,7 +172,7 @@ gap: 10px;
 
     .header-menu-link {
       text-decoration: none;
-      color: #111111;
+      color:var(--main-text-color, #111111);
 font-family: DM Sans;
 font-size: 14px;
 font-style: normal;
@@ -217,14 +223,29 @@ text-transform: uppercase;
 
 /* Mobile menu */
 
-.mobile-menu {
-  display: none;
+.mobile-menu {position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: var(--primary-accent-color, #4F2EE8);
+  
 }
 .mobile-menu-close-icon {
-    stroke: #111111;
+    stroke: var(--main-text-color,  #111111);
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.mobile-menu-close-icon:hover,
+.mobile-menu-close-icon:focus {
+  stroke: var(--primary-accent-color,  #4F2EE8);
+}
+
 .mobile-menu-close{
-    background-color: #FFFFFF;
+    background-color: var(--header-background-color, #FFFFFF);
     width: 28px;
     height: 28px;
     border: 0;
@@ -232,17 +253,20 @@ text-transform: uppercase;
 }
 
 .mobili-menu-list{
+  padding-top: 183px;
     display: flex;
+    justify-content: space-between;
+    gap: 17px;
     flex-direction: column;
-    align-items: baseline;
-    margin-top: 191px;
-    margin-bottom: 25px;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
     margin-right: auto;
     margin-left:auto;
 }
 .mobile-menu-link{
     text-decoration: none;
-    color: #111111;
+    color: var(--main-text-color, #111111);
     font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
@@ -260,7 +284,7 @@ text-transform: uppercase;
     width: 72px;
     height: 34px;
     border-radius: 36px;
-    background: #EAC645;
+    background: var(--secondary-accent-color, #EAC645);
     display: flex;
     padding: 8px 16px;
     align-items: flex-start;
@@ -302,7 +326,7 @@ switcher {
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: white;
+    background: var(--header-background-color, #FFFFFF);
   }
   .slid.round {
     border-radius: 34px;
@@ -320,14 +344,39 @@ switcher {
         -ms-transform: translateX(24px);
         transform: translateX(24px);
       }
+
       .background {
-        
-      }
-      
-.mobile-menu-container {
-  width: 100%;
-  height: 1000px;
+        width: 100%;
+  height: 100%;
+  background-color: var(--primary-accent-color, #4F2EE8);
   background-image: url("../images/books-1x.png"), radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
-  background-size: cover;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+      }
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        .background {background-image: url("../images/books-2x.png"), radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
+          }
+      } 
+
+      
+.mobile-menu-header-container {
+  margin-left: auto;
+    margin-right: auto;
+    border: 1.5px solid #111111;
+    border-radius: 0px 0px 8px 8px;
+    background-color: var(--header-background-color, #FFFFFF);
 
 }
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
