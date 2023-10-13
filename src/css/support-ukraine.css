@@ -9,7 +9,11 @@
   padding-top: 24px;
   padding-left: 40px;
   border-radius: 16px;
-  background-color: var(--primary-accent-color);
+  background: linear-gradient(
+    180deg,
+    rgba(79, 46, 232, 1) 0%,
+    rgba(255, 255, 255, 1) 130%
+  );
 }
 
 .flex-org-list {
@@ -34,11 +38,12 @@
   height: 340px;
 }
 
-.organization-container {
+.list-item {
   list-style: none;
   padding: 0;
   margin: 0;
   transition: transform 0.5s ease;
+  filter: brightness(0) invert(1);
 }
 
 .organization-container li {
@@ -47,10 +52,19 @@
   gap: 20px;
   font-size: 14px;
   line-height: 1.28;
-  color: var(--header-background-color);
+  transition: filter 0.5s ease;
+}
+
+.organization-container li:hover {
+  -webkit-filter: hue-rotate(360deg);
+  filter: hue-rotate(360deg);
 }
 
 .org-btn {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  fill: #4f2ee8;
+  background-color: white;
+  border: 0 none white;
 }

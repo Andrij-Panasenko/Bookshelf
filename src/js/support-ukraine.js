@@ -63,6 +63,8 @@ function createListItem(organization, index) {
     const number = (index + 1).toString().padStart(2, '0');
     const { img, url, title } = organization;
 
+    listItem.classList.add('list-item');
+
     link.href = url;
     link.target = '_blank';
 
