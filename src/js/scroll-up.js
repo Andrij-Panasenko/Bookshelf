@@ -1,4 +1,9 @@
+import throttle from 'lodash.throttle';
+
 const scrollUpButton = document.querySelector(".scroll-up-btn");
+
+scrollUpButton.addEventListener("click", scrollToTop);
+window.addEventListener("scroll", throttledScrollHandler);
 
 function scrollToTop() {
     window.scrollTo({
@@ -7,7 +12,7 @@ function scrollToTop() {
     });
 }
 
-window.addEventListener("scroll", () => {
+ const throttledScrollHandler = throttle(() => {
     if (document.documentElement.scrollTop > 100) {
         scrollUpButton.classList.add("show");
         scrollUpButton.classList.remove("hide");
@@ -15,6 +20,4 @@ window.addEventListener("scroll", () => {
         scrollUpButton.classList.add("hide");
         scrollUpButton.classList.remove("show");
     }
-});
-
-scrollUpButton.addEventListener("click", scrollToTop);
+}, 350);
