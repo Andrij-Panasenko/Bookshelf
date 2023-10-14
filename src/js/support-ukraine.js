@@ -96,7 +96,6 @@ function scrollDown() {
     if (currentPage < totalPages - 1) {
         currentPage++;
         updateList();
-        updateButtonLabel();
         smoothScroll(organizationsList);
     }
 }
@@ -105,7 +104,6 @@ function scrollUp() {
     if (currentPage > 0) {
         currentPage--;
         updateList();
-        updateButtonLabel();
         smoothScroll(organizationsList);
     }
 }
@@ -124,4 +122,3 @@ orgBtn.addEventListener('click', () => {
 });
 
 updateList();
-updateButtonLabel();
