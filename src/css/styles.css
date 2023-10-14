@@ -16,8 +16,12 @@
 /* common  reset */
 @import url('./reset.css');
 
+/* scroll up */
+@import url('./scroll-up.css');
+
 /* modal pop up */
 @import url('./modal-pop-up.css');
 
 /* support */
 @import url('./support-ukraine.css');
+
