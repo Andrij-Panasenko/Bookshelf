@@ -10,3 +10,4 @@ import { bookDelete } from "./js/shoppinglist-markup";
 import { mobileMenu } from "./js/header.js/mobile-menu";
 mobileMenu();
 
+import "./js/support-ukraine";
