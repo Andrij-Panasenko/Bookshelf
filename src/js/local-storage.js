@@ -8,7 +8,7 @@ const infoBookParse = JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY)
 
  bookShopping.addEventListener('click', loadbook);
 
-export function loadbook(event){
+ function loadbook(event){
     event.preventDeefalt();
     
     if(infoBookParse = []){

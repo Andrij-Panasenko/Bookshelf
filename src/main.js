@@ -5,9 +5,8 @@ import { fetchBookById } from "./js/api/get-book-by-id";
 
 import './js/scroll-up';
 
-import {renderCardShoppingBook} from "./js/shoppinglist-markup";
-import { loadbook } from "./js/local-storage";
-import { bookDelete } from "./js/shoppinglist-markup";
+import "./js/local-storage";
+import "./js/shoppinglist-markup";
 
 import { mobileMenu } from "./js/header.js/mobile-menu";
 mobileMenu();
