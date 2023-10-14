@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-        integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-  <script type="module" crossorigin src="/Bookshelf/assets/support-ukraine-9001b443.js"></script>
-  <link rel="modulepreload" crossorigin href="/Bookshelf/assets/modulepreload-polyfill-ec808ebb.js">
-  <link rel="stylesheet" href="/Bookshelf/assets/support-ukraine-8403e2bf.css">
-</head>
-
-<body>
+<section class="org-section">
     <div class="org-container">
         <div class="flex-org-list">
-            <div>
+            <div class="flex-org-title">
                 <h1 class="org-title"><span class="upper-letter">s</span>upport <span
-                        class="upper-letter">u</span>kraine</h1>
+                        class="upper-letter">u</span>kraine
+                </h1>
+                <svg class="trisub-image" width="20" height="32">
+                    <use href="/Bookshelf/assets/icons-e3b8bad3.svg#trisub-icon"></use>
+                </svg>
             </div>
             <div class="slider-container">
                 <ul id="organizations-list" class="organization-container"></ul>
             </div>
         </div>
-        <button class="org-btn">Scroll</button>
+        <div class="flex-btn">
+            <div></div>
+            <button type="button" class="org-btn" aria-label="Next">
+                <svg class="slider-next-button" width="22" height="22">
+                    <use href="/Bookshelf/assets/icons-e3b8bad3.svg#icon-arrow"></use>
+                </svg>
+            </button>
+        </div>
     </div>
-
-    
-</body>
-
-</html>
+</section>
