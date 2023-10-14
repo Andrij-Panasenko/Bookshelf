@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/Bookshelf/assets/favicon-a9d2f181.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <title>Bookshelf</title>
+    <script type="module" crossorigin src="/Bookshelf/assets/index-ea2a7997.js"></script>
+    <link rel="stylesheet" href="/Bookshelf/assets/index-38a09737.css">
+  </head>
+  <body>
+    <!-- header -->
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="/Bookshelf/assets/favicon-a9d2f181.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <title>Bookshelf</title>
-  <script type="module" crossorigin src="/Bookshelf/assets/index-91dad2dd.js"></script>
-  <link rel="stylesheet" href="/Bookshelf/assets/index-b9b96e16.css">
-</head>
-<body>
-  <!-- header -->
-
-  <header class="page-header">
+    <header class="page-header">
   <div class="header-container">
     <nav class="page-nav">
       <a href="./index.html" class="header-logo link">
@@ -105,13 +108,25 @@
 </div>
 
 
-  <!-- main section -->
-  <main>
-    <div class="">
-      <!-- ----- Sidebar ----- -->
-      <aside class="">
-        <!-- ----- All categories ----- -->
-        <section class="org-section">
+    <!-- main section -->
+    <main>
+      <div class="">
+        <!-- ----- Sidebar ----- -->
+        <aside class="">
+          <!-- ----- All categories ----- -->
+          <section>
+  <div class="categories-container js-container">
+    <ul class="categories-list">
+      <li>
+        <button type="submit" class="categories-btn">All categories</button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+          <!-- ----- Support Ukraine -----  -->
+          <section class="org-section">
     <div class="org-container">
         <div class="flex-org-list">
             <div class="flex-org-title">
@@ -136,11 +151,21 @@
         </div>
     </div>
 </section>
-      </aside>
+        </aside>
 
-      <!-- ----- Main section ----- -->
-      <section class="">
-        <div class="backdrop-pop-up is-hidden" data-pop-up>
+        <!-- ----- Main section ----- -->
+        <section class="">
+          <button class="scroll-up-btn">
+    <div class="inner-ellipse">
+        <svg class='scroll-up-svg' width = '24' height = '24'>
+            <use href = '../images/icons.svg#icon-scroll-up-arrow'></use>
+        </svg>
+    </div>
+</button>
+    </main>
+
+    <!-- Modal pop up -->
+    <div class="backdrop-pop-up is-hidden" data-pop-up>
   <div class="modal-pop-up">
     <button
       type="button"
@@ -161,8 +186,7 @@
   </div>
 </div>
 
-  
-  <script type="modul" src="./js/header.js/mobile-menu.js"></script>
-</body>
-
+    
+    <script type="modul" src="./js/header.js/mobile-menu.js"></script>
+  </body>
 </html>
