@@ -20,7 +20,7 @@ export function renderCardShoppingBook(infoBookParse){
         const appleBooksLink = buy_links.find(item => item.name === 'Apple Books');
         
         
-        return `<li class="shopping-book" data-id="${id}">
+        return `<li class="shopping-book js-book" data-id="${id}">
         
         <div class="image-book">
              <img  class="image-book-shopping" src="${book_image}" alt="${description}" loading="lazy" />
