@@ -1,8 +1,7 @@
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
-const buttonBookDelete = document.querySelector('.class="button-shopping-list');
+const buttonBookDelete = document.querySelector('.button-shopping-list');
 const shoppingListBook = document.querySelector('.shopping-book');
-
 
 export function renderCardShoppingBook(infoBookParse){
     const markupShoppingBook = infoBookParse.map(
