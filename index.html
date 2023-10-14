@@ -13,9 +13,9 @@
     />
     
     <title>Bookshelf</title>
-    <script type="module" crossorigin src="/Bookshelf/assets/index-ec4e6453.js"></script>
+    <script type="module" crossorigin src="/Bookshelf/assets/index-76db006f.js"></script>
     <link rel="modulepreload" crossorigin href="/Bookshelf/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="stylesheet" href="/Bookshelf/assets/index-536fcfd3.css">
+    <link rel="stylesheet" href="/Bookshelf/assets/index-e184737f.css">
   </head>
   <body>
     <!-- header -->
@@ -23,23 +23,27 @@
     <header class="page-header">
   <div class="header-container">
     <nav class="page-nav">
-      <a href="../index.html" class="header-logo link">
+      <a href="./index.html" class="header-logo link">
         <svg class="header-logo-icon" width="109" height="28">
-          <use href="../images/icons.svg#icon-logo"></use>
+          <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-logo"></use>
         </svg>
       </a>
       <ul class="header-menu list">
         <li class="header-menu-item">
-          <a class="header-menu-link link header-menu-home" href="../index.html">Home</a>
+          <a class="header-menu-link link header-menu-home" href="./index.html"
+            >Home</a
+          >
         </li>
         <li class="header-menu-item">
-          <a class="header-menu-link link header-menu-shop" href=""
+          <a
+            class="header-menu-link link header-menu-shop"
+            href="./shopping-list.html"
             >Shopping list<svg
               class="header-menu-icon-shop"
               width="20"
               height="20"
             >
-              <use href="../images/icons.svg#icon-uil-cart"></use></svg></a>
+              <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-uil-cart"></use></svg></a>
         </li>
       </ul>
     </nav>
@@ -50,7 +54,7 @@
       </label>
       <button class="mobile-menu-open" type="button">
         <svg class="mobile-menu-open-icon" width="28" height="28">
-          <use href="../images/icons.svg#icon-align-left"></use>
+          <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-align-left"></use>
         </svg>
       </button>
     </div>
@@ -60,47 +64,48 @@
 <!-- Mobile menu -->
 
 <div class="mobile-menu">
-  <div class="mobile-menu-container">
-    <div class="page-mobile">
-      <div class="header-container">
-        <nav class="page-nav">
-          <a href="../index.html" class="header-logo link">
-            <svg class="header-logo-icon" width="109" height="28">
-              <use href="../images/icons.svg#icon-logo"></use>
-            </svg>
-          </a>
-        </nav>
-        <div class="header-wrap-button">
-          <label id="switcher" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slid" />
-            <span class="slider round"></span>
-          </label>
-          <button class="mobile-menu-close" type="button">
-            <svg class="mobile-menu-close-icon" width="28" height="28">
-              <use href="../images/icons.svg#icon-x"></use>
-            </svg>
-          </button>
-        </div>
+  <div class="mobile-menu-header-container">
+    <div class="header-container">
+      <nav class="page-nav">
+        <a href="./index.html" class="header-logo link">
+          <svg class="header-logo-icon" width="109" height="28">
+            <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </nav>
+      <div class="header-wrap-button">
+        <label id="switcher" class="switch">
+          <input type="checkbox" onchange="toggleTheme()" id="slid" />
+          <span class="slider round"></span>
+        </label>
+        <button class="mobile-menu-close" type="button">
+          <svg class="mobile-menu-close-icon" width="28" height="28">
+            <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-x"></use>
+          </svg>
+        </button>
       </div>
     </div>
-  <div class="background">   
+  </div>
+  <div class="background">
     <ul class="mobili-menu-list list">
       <li class="mobile-menu-item">
-        <a href="../index.html" class="mobile-menu-link link mobile-menu-home">Home</a>
+        <a href="./index.html" class="mobile-menu-link link mobile-menu-home"
+          >Home</a
+        >
       </li>
       <li class="mobile-menu-item">
-        <a href="" class="mobile-menu-link link mobile-menu-shop"
+        <a
+          href="./shopping-list.html"
+          class="mobile-menu-link link mobile-menu-shop"
           >Shopping list<svg
             class="header-menu-icon-shop"
             width="20"
             height="20"
           >
-            <use href="../images/icons.svg#icon-uil-cart"></use></svg></a>
+            <use href="/Bookshelf/assets/icons-486c06ff.svg#icon-uil-cart"></use></svg></a>
       </li>
     </ul>
   </div>
-  </div>
-</div>
 </div>
 
 
@@ -132,5 +137,6 @@
 </div>
 
     
+    <script type="modul" src="./js/header.js/mobile-menu.js"></script>
   </body>
 </html>
