@@ -1,10 +1,10 @@
 const organizationsList = document.getElementById('organizations-list');
+const orgBtn = document.querySelector('.org-btn');
 
 const organizations = [
     {
         title: 'Save the Children',
-        url:
-            'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
+        url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
         img: 'images/Save_the_children.png',
     },
     {
@@ -49,24 +49,81 @@ const organizations = [
     },
 ];
 
-organizations.forEach((organization, index) => {
+const itemsPerPage = 6;
+let currentPage = 0;
+
+
+const totalPages = Math.ceil(organizations.length / itemsPerPage);
+
+function createListItem(organization, index) {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     const image = document.createElement('img');
 
     const number = (index + 1).toString().padStart(2, '0');
-    const imgSrc = organization.img;
+    const { img, url, title } = organization;
 
-    link.href = organization.url;
+    link.href = url;
     link.target = '_blank';
 
     link.appendChild(image);
-    image.src = imgSrc;
-    image.alt = organization.title;
+    image.src = img;
+    image.alt = title;
 
     listItem.appendChild(document.createTextNode(number + ' '));
     listItem.appendChild(link);
 
-    organizationsList.appendChild(listItem);
+    return listItem;
+}
+
+function updateList() {
+    const start = currentPage * itemsPerPage;
+    const end = start + itemsPerPage;
+    organizationsList.innerHTML = '';
+
+    const fragment = document.createDocumentFragment();
+    for (let i = start; i < end; i++) {
+        if (i >= organizations.length) break;
+        const listItem = createListItem(organizations[i], i);
+        fragment.appendChild(listItem);
+    }
+    organizationsList.appendChild(fragment);
+}
+
+function scrollDown() {
+    if (currentPage < totalPages - 1) {
+        currentPage++;
+        updateList();
+        updateButtonLabel();
+        smoothScroll(organizationsList);
+    }
+}
+
+function scrollUp() {
+    if (currentPage > 0) {
+        currentPage--;
+        updateList();
+        updateButtonLabel();
+        smoothScroll(organizationsList);
+    }
+}
+
+function updateButtonLabel() {
+    orgBtn.textContent = currentPage < totalPages - 1 ? 'Вниз' : 'Вгору';
+}
+
+function smoothScroll(element) {
+    const offsetTop = element.offsetTop;
+    window.scrollBy({ top: offsetTop, behavior: 'smooth' });
+}
+
+orgBtn.addEventListener('click', () => {
+    if (currentPage < totalPages - 1) {
+        scrollDown();
+    } else {
+        scrollUp();
+    }
 });
 
+updateList();
+updateButtonLabel();
