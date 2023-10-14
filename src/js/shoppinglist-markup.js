@@ -1,3 +1,4 @@
+import {infoBookParse} from "../js/local-storage";
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
 const buttonBookDelete = document.querySelector('.button-shopping-list');
@@ -17,7 +18,6 @@ export function renderCardShoppingBook(infoBookParse){
 
         const amazonLink = buy_links.find(link => link.name === 'Amazon');
         const appleBooksLink = buy_links.find(item => item.name === 'Apple Books');
-        
         
         return `<li class="shopping-book" data-id="${id}">
         
@@ -57,15 +57,23 @@ shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
 
 // Видалення книги по натисканню кнопки
 
-buttonBookDelete.addEventListener('click', bookDelete, {once: true});
+bookDelete(infoBookParse);
 
-export function bookDelete(event){
+function bookDelete(infoBookParse){
+
+    if(!(infoBookParse = []) ){
+   buttonBookDelete.addEventListener('click', bookDelete, {once: true});
+
+   function bookDelete(event){
    const  buttonId = this.dataset.id;
 
    const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
 
     bookId.remove();
-   
+    }
 }
+}
+
+
 
 
