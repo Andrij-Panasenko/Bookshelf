@@ -15,3 +15,6 @@
 
 /* common  reset */
 @import url('./reset.css');
+
+/* modal pop up */
+@import url('./modal-pop-up.css');

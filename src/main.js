@@ -6,3 +6,7 @@ import {renderCardShoppingBook} from "./js/shoppinglist-markup";
 import { loadbook } from "./js/local-storage";
 import { checkingStorage } from "./js/local-storage";
 import { bookDelete } from "./js/shoppinglist-markup";
+
+import { mobileMenu } from "./js/header.js/mobile-menu";
+mobileMenu();
+
