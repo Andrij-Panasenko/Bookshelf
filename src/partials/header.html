@@ -2,15 +2,16 @@
   <div class="header-container">
     <nav class="page-nav">
       <a href="./index.html" class="header-logo link">
-        <svg class="header-logo-icon" width="109" height="28">
-          <use href="./images/icons.svg#icon-logo"></use>
+        <svg class="header-logo-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-logo-2"></use>
+        </svg>
+        <svg class="header-logo-icon-text" width="77" height="13">
+          <use href="./images/icons.svg#icon-Bookshelf"></use>
         </svg>
       </a>
       <ul class="header-menu list">
         <li class="header-menu-item">
-          <a class="header-menu-link link header-menu-home" href="./index.html"
-            >Home</a
-          >
+          <a class="header-menu-link link current" href="./index.html">Home</a>
         </li>
         <li class="header-menu-item">
           <a
@@ -21,13 +22,14 @@
               width="20"
               height="20"
             >
-              <use href="./images/icons.svg#icon-uil-cart"></use></svg></a>
+              <use href="./images/icons.svg#icon-vector"></use></svg
+          ></a>
         </li>
       </ul>
     </nav>
     <div class="header-wrap-button">
       <label id="switch" class="switch">
-        <input type="checkbox" onchange="toggleTheme()" id="slider" />
+        <input type="checkbox" id="slider" />
         <span class="slider round"></span>
       </label>
       <button class="mobile-menu-open" type="button">
@@ -53,7 +55,7 @@
       </nav>
       <div class="header-wrap-button">
         <label id="switcher" class="switch">
-          <input type="checkbox" onchange="toggleTheme()" id="slid" />
+          <input type="checkbox" id="slid" />
           <span class="slider round"></span>
         </label>
         <button class="mobile-menu-close" type="button">
@@ -67,20 +69,18 @@
   <div class="background">
     <ul class="mobili-menu-list list">
       <li class="mobile-menu-item">
-        <a href="./index.html" class="mobile-menu-link link mobile-menu-home"
-          >Home</a
-        >
+        <a href="./index.html" class="mobile-menu-link link current">Home</a>
       </li>
       <li class="mobile-menu-item">
         <a
           href="./shopping-list.html"
           class="mobile-menu-link link mobile-menu-shop"
           >Shopping list<svg
-            class="header-menu-icon-shop"
-            width="20"
-            height="20"
-          >
-            <use href="./images/icons.svg#icon-uil-cart"></use></svg></a>
+          class="header-menu-icon-shop"
+          width="20"
+          height="20">
+          <use href="./images/icons.svg#icon-vector"></use></svg
+        ></a>
       </li>
     </ul>
   </div>

@@ -8,8 +8,8 @@ import './js/scroll-up';
 import "./js/local-storage";
 import "./js/shoppinglist-markup";
 
-import { mobileMenu } from './js/header.js/mobile-menu';
-mobileMenu();
+import './js/header.js/mobile-menu.js';
+import './js/header.js/switch-color.js';
 
 import './js/support-ukraine';
 import './js/all-categories/all-categories';
