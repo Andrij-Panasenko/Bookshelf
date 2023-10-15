@@ -127,7 +127,7 @@ button {
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: var(--header-background-color);
+    background: white;
   }
   .slider.round {
     border-radius: 34px;
@@ -326,7 +326,7 @@ text-transform: uppercase;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: var(--header-background-color);
+    background: white;
   }
   .slid.round {
     border-radius: 34px;
