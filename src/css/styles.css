@@ -27,3 +27,6 @@
 
 /* all categories */
 @import url('./all-categories.css');
+
+/* Bestsellers */
+@import url('./bestsellers.css');
