@@ -57,7 +57,8 @@ shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
 
 // Видалення книги по натисканню кнопки
 
-bookDelete(infoBookParse);
+//закоментував 61 строку Андрій
+// bookDelete(infoBookParse);
 
 function bookDelete(infoBookParse){
 
