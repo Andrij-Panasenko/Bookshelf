@@ -171,7 +171,7 @@ svg {
 @media screen and (max-width: 1024px) {
     .books-list {
         margin-bottom: 8px;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 }
 
@@ -275,21 +275,25 @@ svg {
     margin-left: auto;
 }
 
-@media screen and (max-width: 1024px) {
-    .bestsellers-book-item:nth-child(n + 2) {
-        display: none;
-    }
+/* Відображення однієї книжки з кнопкою на мобайлі */
+.bestsellers-book-item:nth-child(n + 2) {
+    display: none;
 }
 
-@media screen and (max-width: 1440px) {
+/* Відображення книжок для таблета */
+@media screen and (min-width: 768px) {
+    .bestsellers-book-item:nth-child(n + 2) {
+            display: block;
+    }
+
     .bestsellers-book-item:nth-child(n + 4) {
         display: none;
     }
 }
-
-@media screen and (max-width: 1920px) {
-    .bestsellers-book-item:nth-child(n + 5) {
-        display: none;
+/* Відображення книжок для десктопа */
+@media screen and (min-width: 1440px) {
+    .bestsellers-book-item:nth-child(n + 4) {
+        display: block;
     }
 }
 
@@ -614,4 +618,34 @@ button,
 .button--login {
     border: 1.5px solid black;
     border-radius: 18px;
+}
+
+
+/* Медіазапити. Робив Андрій. Тім лід Змінювати лише після узгодження зі мною*/
+/* Таблет */
+@media screen and (min-width: 768px) {
+    .book-thumb {
+        max-width: 218px;
+    }
+
+    .book-image {
+        min-width: 218px;
+        height: 316px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+    .bestseller-category {
+        max-width: 996px;
+    }
+
+    .book-thumb {
+        max-width: 180px;
+    }
+
+    .book-image {
+        min-width: 180px;
+        height: 256px;
+    }
 }
