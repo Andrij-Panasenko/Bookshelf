@@ -7,7 +7,7 @@
 .categories-btn {
   border: none;
   background-color: var(--header-background-color);
-  color: var(--primary-accent-color);
+  color: var(--variable-primary-accent-color);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.125;
