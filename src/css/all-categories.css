@@ -6,7 +6,7 @@
 
 .categories-btn {
   border: none;
-  background-color: var(--header-background-color);
+  background-color: transparent;
   color: var(--variable-primary-accent-color);
   font-size: 16px;
   font-weight: 700;
@@ -25,7 +25,7 @@
 
 .item-btn {
   border: none;
-  background-color: var(--header-background-color);
+  background-color: transparent;
   color: var(--categories-text-color);
   font-size: 16px;
   font-weight: 400;
