@@ -4,6 +4,9 @@
 /* common css */
 @import url('./common.css');
 
+/* Header */
+@import url('./header.css');
+
 /* common shopping_list */
 @import url('./shopping_list.css');
 
@@ -12,3 +15,15 @@
 
 /* common  reset */
 @import url('./reset.css');
+
+/* scroll up */
+@import url('./scroll-up.css');
+
+/* modal pop up */
+@import url('./modal-pop-up.css');
+
+/* support */
+@import url('./support-ukraine.css');
+
+/* all categories */
+@import url('./all-categories.css');
