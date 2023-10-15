@@ -51,6 +51,7 @@ const organizations = [
 
 const itemsPerPage = 6;
 let currentPage = 0;
+let isAnimating = false;
 
 
 const totalPages = Math.ceil(organizations.length / itemsPerPage);
@@ -77,48 +78,48 @@ function createListItem(organization, index) {
 
     return listItem;
 }
-
 function updateList() {
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
+
     organizationsList.innerHTML = '';
 
     const fragment = document.createDocumentFragment();
     for (let i = start; i < end; i++) {
-        if (i >= organizations.length) break;
-        const listItem = createListItem(organizations[i], i);
+        const adjustedIndex = i % organizations.length;
+        const listItem = createListItem(organizations[adjustedIndex], adjustedIndex);
         fragment.appendChild(listItem);
     }
     organizationsList.appendChild(fragment);
 }
 
-function scrollDown() {
-    if (currentPage < totalPages - 1) {
-        currentPage++;
-        updateList();
-        smoothScroll(organizationsList);
-    }
-}
-
 function scrollUp() {
-    if (currentPage > 0) {
-        currentPage--;
-        updateList();
-        smoothScroll(organizationsList);
-    }
+    currentPage = (currentPage - 1 + organizations.length) % organizations.length;
+    updateList();
 }
 
-function smoothScroll(element) {
-    const offsetTop = element.offsetTop;
-    window.scrollBy({ top: offsetTop, behavior: 'smooth' });
+function scrollDown() {
+    currentPage = (currentPage + 1) % organizations.length;
+    updateList();
 }
 
 orgBtn.addEventListener('click', () => {
-    if (currentPage < totalPages - 1) {
+    setTimeout(() => {
+        scrollUp();
+        }, 200);
+});
+
+organizationsList.addEventListener('wheel', (e) => {
+    setTimeout(() => {
+    if (e.deltaY > 0) {
         scrollDown();
     } else {
         scrollUp();
-    }
+    }}, 200);
 });
 
 updateList();
+
+
+
+
