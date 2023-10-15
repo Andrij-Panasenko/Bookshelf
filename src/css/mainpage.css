@@ -1,0 +1,44 @@
+/* Точки перелому 375,  768, 1440*/
+
+/* Mobile */
+.main-container {
+  max-width: 335px;
+  margin: 0 auto;
+}
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-element{
+  margin-bottom: 40px;
+}
+
+.content-element{}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .main-container {
+    max-width: calc(768px - 64px);
+  }
+
+  .sidebar-element {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+  .page-wrapper {
+    max-width: calc(1440px - 48px);
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .sidebar-element {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

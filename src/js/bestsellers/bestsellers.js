@@ -12,36 +12,68 @@ export async function renderTopBooks() {
     const response = await fetchTopBooks();
     const data = response.data;
     console.log(data);
-    data.map(({ list_name, books }) => {
-      const markup = books.map(({ _id, author, book_image, title, description }) => {
-          return  `<ul class="category-blocks-list">
-             <li class="bestseller-category">
-               <h3 class="bestseller-category-title">${title}</h3>
-                 <ul class="books-list">
-                 <li class="books-list-item bestsellers-book-item">
-                 <a class="book-link" href="${book_image}" aria-label="Book thumbnail">
-                   <div class="book-thumb">
-                     <img class="book-image" src="${book_image}" loading="lazy" data_id=${_id} alt="${description}"/>
-                     <div class="book-image-overlay" data_id=${_id} aria-label="${title}">
-                       <p class="book-image-overlay-text">Quick view</p>
-                     </div>
-                   </div>
-                   <div class="book-item-meta">
-                     <h3 class="book-title">${title}</h3>
-                     <p class="book-author">${author}</p>
-                   </div>
-                 </a>
-                 </li>
-               </ul>
-                  <button type="button" class="button see-more-btn" data-id="${list_name}">See more</button>
-              </li>
-            </ul>`;
-        })
-        .join('');
-        contentContainer.innerHTML = markup;
-    }).join('');
-} catch (error) {
-  console.log("помилка");
-}
-}
+    const bestsell = `
+      <ul class="category-blocks-list">
+        ${data
+          .map(
+            ({ list_name, books }) => `
+          <li class="bestseller-category">
+            <h3 class="bestseller-category-title"> ${list_name}</h3> 
+            <ul class="books-list">
+            ${books
+              .map(
+                ({ _id, author, book_image, title, description }) => `
+              <li class="books-list-item bestsellers-book-item">
+                  <a class="book-link" href="${book_image}" aria-label="Book thumbnail">
+                    <div class="book-thumb">
+                      <img class="book-image" src="${book_image}" loading="lazy" data_id=${_id} alt="${description}"/>
+                      <div class="book-image-overlay" data_id=${_id} aria-label="${title}">
+                        <p class="book-image-overlay-text">Quick view</p>
+                      </div>
+                    </div>
+                    <div class="book-item-meta">
+                      <h3 class="book-title">${title}</h3>
+                      <p class="book-author">${author}</p>
+                    </div>
+                  </a>
+                  </li>`
+              )
+              .join('')}
+            </ul> 
+            <button type="button" class="button see-more-btn" data-id="${list_name}">See more</button>
+          </li>`
+          )
+          .join('')}
+      </ul>`;
+
+      contentContainer.innerHTML = bestsell;
+    
+    } catch (error) {
+      console.log("помилка");
+    }
+  }
 renderTopBooks(); 
+
+
+
+//НЕ ВИДАЛЯТИ
+            //  <li class="bestseller-category">
+            //    <h3 class="bestseller-category-title">${title}</h3>
+            //      <ul class="books-list">
+            //      <li class="books-list-item bestsellers-book-item">
+            //      <a class="book-link" href="${book_image}" aria-label="Book thumbnail">
+            //        <div class="book-thumb">
+            //          <img class="book-image" src="${book_image}" loading="lazy" data_id=${_id} alt="${description}"/>
+            //          <div class="book-image-overlay" data_id=${_id} aria-label="${title}">
+            //            <p class="book-image-overlay-text">Quick view</p>
+            //          </div>
+            //        </div>
+            //        <div class="book-item-meta">
+            //          <h3 class="book-title">${title}</h3>
+            //          <p class="book-author">${author}</p>
+            //        </div>
+            //      </a>
+            //      </li>
+            //    </ul>
+            //       <button type="button" class="button see-more-btn" data-id="${list_name}">See more</button>
+            //   </li>

@@ -33,3 +33,6 @@
 
 /* Hardcover */
 @import url('./hardcover-fiction.css');
+
+/* Position main page */
+@import url('./mainpage.css');

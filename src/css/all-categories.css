@@ -42,9 +42,7 @@
 }
 
 @media only screen and (width >= 768px) {
-  .categories-container {
-    margin-bottom: 100px;
-  }
+  
 
   .categories-btn {
     font-size: 18px;
