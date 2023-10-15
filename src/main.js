@@ -13,3 +13,5 @@ import './js/header.js/switch-color.js';
 
 import './js/support-ukraine';
 import './js/all-categories/all-categories';
+
+import './js/bestsellers';
