@@ -5,9 +5,9 @@ export function getLiMarkup(card) {
     fetchBookByCategory(card)
     .then(item => {
         item
-         .map(({ id, author, book_image, title }) => {
+         .map(({ _id, author, book_image, title }) => {
             const markup = `
-            <li class="gallery__item" id="${id}">
+            <li class="gallery__item" id="${_id}">
             <img
               class="gallery__image"
               src="${book_image}"
