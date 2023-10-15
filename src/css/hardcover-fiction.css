@@ -51,9 +51,9 @@ ul{
     line-height: 1.16;
     overflow: hidden;
 }
-.overley-item{
-    /* height: 76px; */
-    /* width: 18px; */
+/* .overley-item{
+    height: 76px;
+    width: 18px;
     opacity: 0;
     visibility: hidden;
     color: #111;
@@ -70,7 +70,7 @@ ul{
     position: absolute;
     bottom: 55px;
     transform: translateY(100%);
-}
+} */
 
 .gallery__item:hover .overley-item{
     visibility: visible;
@@ -103,9 +103,9 @@ ul{
     .gallery-author{
         max-width: 218px;
     }
-    .overley-item{
+    /* .overley-item{
         width: 115px;
-    }
+    } */
 }
 
 @media screen and (min-width: 1024px){
@@ -123,7 +123,7 @@ ul{
 .gallery-author{
     max-width: 180px;
 }
-.overley-item{
+/* .overley-item{
 width: 76px;
-}
+} */
 }
