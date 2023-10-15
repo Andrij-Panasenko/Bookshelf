@@ -22,23 +22,22 @@ ul{
 }
 
 .gallery__image{
-    max-width: 335px;
-    min-width: 335px;
+    width: 180px;
+    height: 256px;
     border-radius: 8px;
     margin-bottom: 14px;
 }
 
 .gallery-title-book{
-    max-width: 335px;
-    letter-spacing: -.04em;
-    text-transform: uppercase;
     color: #111;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-bottom: 4px;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 1.25;
-    overflow: hidden;
+    line-height: 18px;
+    letter-spacing: -0.64px;
+    text-transform: uppercase;
+    margin-top: 0;
 }
 
 .gallery-author{
@@ -48,8 +47,35 @@ ul{
     font-size: 12px;
     font-style: italic;
     line-height: 1.16;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
+.overley-item{
+    /* height: 76px; */
+    /* width: 18px; */
+    opacity: 0;
+    visibility: hidden;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -.04em;
+    background-color: #eac645;
+    border-radius: 0 0 8px 8px;
+    padding: 26px 52px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    transition: opacity 1s cubic-bezier(.4,0,.2,1);
+    position: absolute;
+    bottom: 55px;
+    transform: translateY(100%);
+}
+
+.gallery__item:hover .overley-item{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
 /* Media */
@@ -72,6 +98,9 @@ ul{
     .gallery-author{
         max-width: 218px;
     }
+    .overley-item{
+        width: 115px;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -88,5 +117,8 @@ ul{
 }
 .gallery-author{
     max-width: 180px;
+}
+.overley-item{
+width: 76px;
 }
 }
