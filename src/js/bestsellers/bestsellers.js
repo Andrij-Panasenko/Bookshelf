@@ -1,54 +1,47 @@
 import getTopBooksArray from './fetchBooks';
 import { createBookMarkup } from './oneBookMarkup';
 import getRefs from './refs.js';
+import { fetchTopBooks } from '../api/get-api-request';
 
-const { renderingContainer } = getRefs();
 
-// Fetch and render bestsellers:
+const contentContainer = document.querySelector('.content-rendering-container');
+
+
 export async function renderTopBooks() {
-  let data;
-  const savedData = sessionStorage.getItem('bestsellers');
-
-  // Check if there's saved data in sessionStorage...
-  if (savedData) {
-    data = JSON.parse(savedData);
-  } else {
-    // ...otherwise fetch data from server
-    try {
-      data = await getTopBooksArray();
-      sessionStorage.setItem('bestsellers', JSON.stringify(data));
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  console.log(data);
-  const bestsellerListMarkup = `
-      <ul class="category-blocks-list">
-        ${data
-          .map(
-            ({ list_name, books }) => `
-              <li class="bestseller-category">
-          <h3 class="bestseller-category-title">${list_name}</h3>
-          <ul class="books-list">
-            ${books
-              .map(
-                book => `
-              <li class="books-list-item bestsellers-book-item">
-                ${createBookMarkup(book)}
+  try {
+    const response = await fetchTopBooks();
+    const data = response.data;
+    console.log(data);
+    data.map(({ list_name, books }) => {
+      const markup = books.map(({ _id, author, book_image, title, description }) => {
+          return  `<ul class="category-blocks-list">
+             <li class="bestseller-category">
+               <h3 class="bestseller-category-title">${title}</h3>
+                 <ul class="books-list">
+                 <li class="books-list-item bestsellers-book-item">
+                 <a class="book-link" href="${book_image}" aria-label="Book thumbnail">
+                   <div class="book-thumb">
+                     <img class="book-image" src="${book_image}" loading="lazy" data_id=${_id} alt="${description}"/>
+                     <div class="book-image-overlay" data_id=${_id} aria-label="${title}">
+                       <p class="book-image-overlay-text">Quick view</p>
+                     </div>
+                   </div>
+                   <div class="book-item-meta">
+                     <h3 class="book-title">${title}</h3>
+                     <p class="book-author">${author}</p>
+                   </div>
+                 </a>
+                 </li>
+               </ul>
+                  <button type="button" class="button see-more-btn" data-id="${list_name}">See more</button>
               </li>
-            `
-              )
-              .join('')}
-          </ul>
-          <button type="button" class="button see-more-btn" data-id="${list_name}">See more</button>
-        </li>
-            `
-          )
-          .join('')}
-      </ul>
-    `;
-
-  renderingContainer.innerHTML = bestsellerListMarkup;
+            </ul>`;
+        })
+        .join('');
+        contentContainer.innerHTML = markup;
+    }).join('');
+} catch (error) {
+  console.log("помилка");
 }
-
-renderTopBooks();
+}
+renderTopBooks(); 
