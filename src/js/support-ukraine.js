@@ -28,13 +28,20 @@ $('.organization-container').slick({
   ],
 });
 
+function getRetinaImageUrl(imageObject) {
+    const isRetina = window.matchMedia && window.matchMedia("(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)").matches;
+    const selectedImage = isRetina ? imageObject.img2x : imageObject.img;
+    return selectedImage;
+}
+
 function generateSupportFundsMarkup(supportFunds) {
   const markup = supportFunds
     .map((uaFund, index) => {
       const listIndex = String(index + 1).padStart(2, '0');
+      const imageUrl = getRetinaImageUrl(uaFund);
       return `<div><li class="support-column">
   <span class="support-index">${listIndex}</span><a class="fund-link" href="${uaFund.url}" target="_blank" rel="noopener noreferrer">
-  <img class="list-item" src="${uaFund.img}" alt="${uaFund.title}"></a>
+  <img class="list-item" src="${imageUrl}" alt="${uaFund.title}"></a>
 </li></div>
 `;
     })
