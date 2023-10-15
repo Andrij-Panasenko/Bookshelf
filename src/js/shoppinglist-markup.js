@@ -1,8 +1,8 @@
+import {infoBookParse} from "../js/local-storage";
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
-const buttonBookDelete = document.querySelector('.class="button-shopping-list');
+const buttonBookDelete = document.querySelector('.button-shopping-list');
 const shoppingListBook = document.querySelector('.shopping-book');
-
 
 export function renderCardShoppingBook(infoBookParse){
     const markupShoppingBook = infoBookParse.map(
@@ -19,8 +19,7 @@ export function renderCardShoppingBook(infoBookParse){
         const amazonLink = buy_links.find(link => link.name === 'Amazon');
         const appleBooksLink = buy_links.find(item => item.name === 'Apple Books');
         
-        
-        return `<li class="shopping-book js-book" data-id="${id}">
+        return `<li class="shopping-book" data-id="${id}">
         
         <div class="image-book">
              <img  class="image-book-shopping" src="${book_image}" alt="${description}" loading="lazy" />
@@ -56,15 +55,26 @@ shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
 
 }
 
-buttonBookDelete.addEventListener('click', bookDelete, {once: true});
+// Видалення книги по натисканню кнопки
 
-export function bookDelete(event){
+//закоментував 61 строку Андрій
+// bookDelete(infoBookParse);
+
+function bookDelete(infoBookParse){
+
+    if(!(infoBookParse = []) ){
+   buttonBookDelete.addEventListener('click', bookDelete, {once: true});
+
+   function bookDelete(event){
    const  buttonId = this.dataset.id;
 
    const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
 
     bookId.remove();
-   
+    }
 }
+}
+
+
 
 
