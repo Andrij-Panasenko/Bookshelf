@@ -1,0 +1,124 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.category-title{
+    max-width: 320px;
+    letter-spacing: -.04em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 1.18;
+}
+.span-fict{
+    color: #4f2ee8;
+}
+
+.gallery__item{
+    cursor: pointer;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.gallery__image{
+    width: 180px;
+    height: 256px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+.gallery-title-book{
+    color: #111;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.64px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.gallery-author{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #b4afaf;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.16;
+    /* overflow: hidden; */
+}
+.overley-item{
+    /* height: 76px; */
+    /* width: 18px; */
+    opacity: 0;
+    visibility: hidden;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -.04em;
+    background-color: #eac645;
+    border-radius: 0 0 8px 8px;
+    padding: 26px 52px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    transition: opacity 1s cubic-bezier(.4,0,.2,1);
+    position: absolute;
+    bottom: 55px;
+    transform: translateY(100%);
+}
+
+.gallery__item:hover .overley-item{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Media */
+
+@media screen and (min-width: 768px){
+    .gallery-list{
+        max-width: 704px;
+        flex-flow: wrap;
+        justify-content: space-between;
+        display: flex;
+    }
+    .gallery__image{
+        min-width: 218px;
+        max-width: 218px;
+        height: 316px;
+    }
+    .gallery-title-book{
+        max-width: 218px;
+    }
+    .gallery-author{
+        max-width: 218px;
+    }
+    .overley-item{
+        width: 115px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+.gallery-list{
+    max-width: 996px;
+}
+.gallery__image{
+    min-width: 180px;
+    max-width: 180px;
+    height: 256px;
+}
+.gallery-title-book{
+    max-width: 180px;
+}
+.gallery-author{
+    max-width: 180px;
+}
+.overley-item{
+width: 76px;
+}
+}

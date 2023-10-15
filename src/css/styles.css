@@ -27,3 +27,5 @@
 
 /* all categories */
 @import url('./all-categories.css');
+/* Hardcover */
+@import url('./hardcover-fiction.css');
