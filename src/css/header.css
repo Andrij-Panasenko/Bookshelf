@@ -1,36 +1,5 @@
 
 
-h1,
-h2,
-h3,
-h4,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-img {
-  display: block;
-}
-button {
-  cursor: pointer;
-}
-
-.list {
-  list-style: none;
-}
-.link {
-  text-decoration: none;
-}
-
-
 .header-container {
     width: 100%;
     box-sizing: border-box;
@@ -43,16 +12,17 @@ button {
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
-    
+    border-radius: 0px 0px 8px 8px;
+    border: 1.5px solid #111;
+    background-color: var(--header-background-color);
     
 }
 .page-header {
     margin-left: auto;
     margin-right: auto;
-    border: 1.5px solid var(--main-text-color);
-    background-color: var(--header-background-color);
     
-    border-radius: 0px 0px 8px 8px;
+    
+  
 }
 .mobile-menu-open {
     margin-left: 14px;
@@ -127,7 +97,7 @@ button {
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: var(--header-background-color);
+    background: white;
   }
   .slider.round {
     border-radius: 34px;
@@ -159,12 +129,13 @@ button {
       display: none;
     }
     .header-container {
+      margin: 0 auto;
         width: 768px;
         height: 72px;
         padding-left: 32px;
         padding-right: 32px;
-        margin-left: 0px;
-        margin-right: 0px;
+        /* margin-left: 0px;
+        margin-right: 0px; */
     }
     .mobile-menu-open {
         display: none;
@@ -263,17 +234,21 @@ text-transform: uppercase;
 }
 
 .mobili-menu-list{
-  padding-top: 183px;
+  
     display: flex;
-    justify-content: space-between;
     gap: 17px;
     flex-direction: column;
     align-items: baseline;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: auto;
-    margin-left: 129px;
 }
+
+.mobile-menu-wrapper {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 183px;
+  min-width: 118px;
+}
+
 .mobile-menu-link{
     text-decoration: none;
     color: var(--main-text-color);
@@ -326,7 +301,7 @@ text-transform: uppercase;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: var(--header-background-color);
+    background: white;
   }
   .slid.round {
     border-radius: 34px;
@@ -369,8 +344,8 @@ text-transform: uppercase;
   position: relative;
   margin-left: auto;
     margin-right: auto;
-    border: 1.5px solid var(--main-text-color);
-    border-radius: 0px 0px 8px 8px;
+    /* border: 1.5px solid var(--main-text-color);
+    border-radius: 0px 0px 8px 8px; */
     background-color: var(--header-background-color);
 
 }
