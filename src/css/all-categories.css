@@ -23,6 +23,7 @@
 }
 
 .item-btn {
+  text-align: left !important; 
   border: none;
   background-color: transparent;
   color: var(--categories-text-color);
