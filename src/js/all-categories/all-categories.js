@@ -1,8 +1,8 @@
 import { fetchCatrgoryList } from '../api/category-list';
+// import { renderTopBooks } from '.';
 
 const list = document.querySelector('.categories-list');
-
-// console.log(list);
+const allCategoriesBtn = document.querySelector('.categories-btn');
 
 fetchCatrgoryList().then(resp => {
   console.log(resp);
@@ -15,3 +15,16 @@ fetchCatrgoryList().then(resp => {
 });
 
 fetchCatrgoryList();
+
+list.addEventListener('click', onCategoryClick);
+
+function onCategoryClick() {
+  allCategoriesBtn.classList.remove('categories-btn');
+  allCategoriesBtn.classList.add('item-btn');
+}
+
+// allCategoriesBtn.addEventListener('click', onAllCategoriesClick);
+
+// function onAllCategoriesClick() {
+//   renderTopBooks();
+// }

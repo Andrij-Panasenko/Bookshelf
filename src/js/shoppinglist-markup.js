@@ -1,11 +1,10 @@
-
 const shoppingBooks = document.querySelector('.shopping-book-list');
 const buttonBookDelete = document.querySelector('.class="button-shopping-list');
 const shoppingListBook = document.querySelector('.shopping-book');
 
-
-export function renderCardShoppingBook(infoBookParse){
-    const markupShoppingBook = infoBookParse.map(
+export function renderCardShoppingBook(infoBookParse) {
+  const markupShoppingBook = infoBookParse
+    .map(
       ({
         book_image,
         title,
@@ -15,11 +14,11 @@ export function renderCardShoppingBook(infoBookParse){
         buy_links,
         id,
       }) => {
-
         const amazonLink = buy_links.find(link => link.name === 'Amazon');
-        const appleBooksLink = buy_links.find(item => item.name === 'Apple Books');
-        
-        
+        const appleBooksLink = buy_links.find(
+          item => item.name === 'Apple Books'
+        );
+
         return `<li class="shopping-book js-book" data-id="${id}">
         
         <div class="image-book">
@@ -52,19 +51,15 @@ export function renderCardShoppingBook(infoBookParse){
     )
     .join('');
 
-shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
-
+  shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
 }
 
-buttonBookDelete.addEventListener('click', bookDelete, {once: true});
+buttonBookDelete.addEventListener('click', bookDelete, { once: true });
 
-export function bookDelete(event){
-   const  buttonId = this.dataset.id;
+export function bookDelete(event) {
+  const buttonId = this.dataset.id;
 
-   const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
+  const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
 
-    bookId.remove();
-   
+  bookId.remove();
 }
-
-
