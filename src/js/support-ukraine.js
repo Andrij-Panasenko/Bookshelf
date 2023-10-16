@@ -47,4 +47,4 @@ function generateSupportFundsMarkup(supportFunds) {
     })
     .join('');
   return markup;
-}
+};
