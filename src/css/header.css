@@ -12,17 +12,17 @@
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
-    border-radius: 0px 0px 8px 8px;
-    border: 1.5px solid #111;
-    background-color: var(--header-background-color);
+    
     
 }
 .page-header {
   position: relative;
   z-index: 20000;
-    margin-left: auto;
-    margin-right: auto;
-    
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid #111;
+  background-color: var(--header-background-color);
     
   
 }
@@ -299,9 +299,9 @@ text-transform: uppercase;
   height: 100%;
   z-index: 999;
   opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity var(--transition);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition);
     
   
 }
