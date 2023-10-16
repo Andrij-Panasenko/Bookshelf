@@ -1,37 +1,77 @@
-<section>
-    <div class="container shopping-flex">
-        <h2 class="shopping-tittle"> Shopping <span class="shopping-tittle-span"> List</span> </h2>
-       
-        <ul class="shopping-book-list">
-          
-        </ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Shopping List</title>
+  </head>
+  <body>
+     <load src="./partials/header.html" />
 
-        
-        
-        <div class="stub visually-hidden">
-            <p class="stub-text">This page is empty, add some books and proceed to order.</p>
-            <picture class="stub-img">
+    <main>
+      <div class="shoplist-wrapper">
+        <!-- Support Ukraine -->
+       <div class="shoplist-indicator ">
+         <load src="./support-ukraine.html" />
+       </div>
+
+        <section class="flex-container">
+          <h2 class="shopping-tittle">
+            Shopping <span class="shopping-tittle-span"> List</span>
+          </h2>
+          <div class="container shopping-flex">
+
+            <ul class="shopping-book-list"></ul>
+
+            <div class="stub">
+              <p class="stub-text">
+                This page is empty, add some books and proceed to order.
+              </p>
+              <picture class="stub-img">
                 <source
-                  srcset="./images/book_tabl-1-min.png 1x, ./images/book_tabl-2-min.png 2x"
+                  srcset="
+                    ./images/book_tabl-1-min.png 1x,
+                    ./images/book_tabl-2-min.png 2x
+                  "
                   media="(min-width: 1440px)"
                 />
-        
+
                 <source
-                  srcset="./images/book_tabl-1-min.png 1x, ./images/book_tabl-2-min.png 2x"
+                  srcset="
+                    ./images/book_tabl-1-min.png 1x,
+                    ./images/book_tabl-2-min.png 2x
+                  "
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="./images/book_mobile-1-min.png 1x, ./images/book_mobile-2-min.png 2x"
+                  srcset="
+                    ./images/book_mobile-1-min.png 1x,
+                    ./images/book_mobile-2-min.png 2x
+                  "
                   media="(max-width: 375px)"
                 />
-        
+
                 <img
                   class="shopping-img"
                   src="./images/book_mobile-1-min.png"
                   alt="books  "
                 />
               </picture>
-        </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
-    </div>
-</section>
+      <script type="module" src="./shoplist-page.js"></script>
+    </main>
+  </body>
+</html>
