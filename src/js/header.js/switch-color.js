@@ -2,7 +2,7 @@ const sweet = document.querySelector("#slider");
 console.log(sweet);
 sweet.addEventListener("change", toggleTheme);
 const mobileSweet = document.querySelector("#slid");
-mobileSweet.addEventListener("change", toggleTheme);
+// mobileSweet.addEventListener("change", toggleTheme);
 
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
@@ -11,7 +11,6 @@ function setTheme(themeName) {
 
 // function to toggle between light and dark theme
 function toggleTheme() {
-    console.log("oooooo")
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-light');
     } else {
