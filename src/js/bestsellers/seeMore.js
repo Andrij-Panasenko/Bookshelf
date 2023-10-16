@@ -23,9 +23,8 @@ async function seeMoreBtnClickHandler(e) {
     if (btn.dataset.id === id) {
       btn.classList.add('active-category');
     }
+      activeCategoryBtn.classList.remove('active-category');
   }
-  activeCategoryBtn.classList.remove('active-category');
-
   renderBooksByCategory(data);
   scrollToTop();
 }
