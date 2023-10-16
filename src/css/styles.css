@@ -27,3 +27,12 @@
 
 /* all categories */
 @import url('./all-categories.css');
+
+/* Bestsellesr */
+@import url('./bestsellers.css');
+
+/* Hardcover */
+@import url('./hardcover-fiction.css');
+
+/* Position main page */
+@import url('./mainpage.css');

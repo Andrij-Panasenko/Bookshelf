@@ -1,13 +1,12 @@
 .categories-container {
   max-width: 375px;
   margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 .categories-btn {
   border: none;
-  background-color: var(--header-background-color);
-  color: var(--primary-accent-color);
+  background-color: transparent;
+  color: var(--variable-primary-accent-color);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.125;
@@ -25,7 +24,7 @@
 
 .item-btn {
   border: none;
-  background-color: var(--header-background-color);
+  background-color: transparent;
   color: var(--categories-text-color);
   font-size: 16px;
   font-weight: 400;
@@ -46,9 +45,7 @@
 }
 
 @media only screen and (width >= 768px) {
-  .categories-container {
-    margin-bottom: 100px;
-  }
+  
 
   .categories-btn {
     font-size: 18px;

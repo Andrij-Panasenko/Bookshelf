@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
@@ -21,9 +21,11 @@
 
     <!-- main section -->
     <main>
-      <div class="">
+      
+
+      <div class="page-wrapper main-container">
         <!-- ----- Sidebar ----- -->
-        <aside class="">
+        <aside class="sidebar-element">
           <!-- ----- All categories ----- -->
           <load src="./partials/all-categories.html" />
 
@@ -32,9 +34,11 @@
         </aside>
 
         <!-- ----- Main section ----- -->
-        <section class="">
+        <section class="content-element">
+          <load src="./partials/bestsellers.html" />
           <load src="" />
-          <load src="" />
+          <!-- shopping_list -->
+          <!-- <load src="./shopping-list.html" /> -->
         </section>
       </div>
       <!-- ----- Scroll up ----- -->
@@ -44,6 +48,6 @@
     <!-- Modal pop up -->
     <load src="./partials/modal-pop-up.html" />
     <script type="module" src="./main.js"></script>
-    <script type="modul" src="./js/header.js/mobile-menu.js"></script>
+    <script type="module" src="./js/header.js/mobile-menu.js"></script>
   </body>
 </html>

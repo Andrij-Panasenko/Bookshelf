@@ -1,16 +1,18 @@
+
 <header class="page-header">
   <div class="header-container">
     <nav class="page-nav">
       <a href="./index.html" class="header-logo link">
-        <svg class="header-logo-icon" width="109" height="28">
-          <use href="./images/icons.svg#icon-logo"></use>
+        <svg class="header-logo-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-logo-2"></use>
+        </svg>
+        <svg class="header-logo-icon-text" width="77" height="13">
+          <use href="./images/icons.svg#icon-Bookshelf"></use>
         </svg>
       </a>
       <ul class="header-menu list">
         <li class="header-menu-item">
-          <a class="header-menu-link link header-menu-home" href="./index.html"
-            >Home</a
-          >
+          <a class="header-menu-link link current" href="./index.html">Home</a>
         </li>
         <li class="header-menu-item">
           <a
@@ -21,67 +23,47 @@
               width="20"
               height="20"
             >
-              <use href="./images/icons.svg#icon-uil-cart"></use></svg></a>
+              <use href="./images/icons.svg#icon-vector"></use></svg></a>
         </li>
       </ul>
     </nav>
     <div class="header-wrap-button">
       <label id="switch" class="switch">
-        <input type="checkbox" onchange="toggleTheme()" id="slider" />
+        <input type="checkbox" id="slider" />
         <span class="slider round"></span>
       </label>
       <button class="mobile-menu-open" type="button">
         <svg class="mobile-menu-open-icon" width="28" height="28">
-          <use href="./images/icons.svg#icon-align-left"></use>
+          <use href="./images/icons.svg#icon-align-left" class="icon-burger"></use>
+          <use href="./images/icons.svg#icon-x" class="mobile-menu-close-icon"></use>
         </svg>
       </button>
     </div>
   </div>
-</header>
+</header>   
 
-<!-- Mobile menu -->
+  <!-- Mobile menu -->
+ 
 
 <div class="mobile-menu">
-  <div class="mobile-menu-header-container">
-    <div class="header-container">
-      <nav class="page-nav">
-        <a href="./index.html" class="header-logo link">
-          <svg class="header-logo-icon" width="109" height="28">
-            <use href="./images/icons.svg#icon-logo"></use>
-          </svg>
-        </a>
-      </nav>
-      <div class="header-wrap-button">
-        <label id="switcher" class="switch">
-          <input type="checkbox" onchange="toggleTheme()" id="slid" />
-          <span class="slider round"></span>
-        </label>
-        <button class="mobile-menu-close" type="button">
-          <svg class="mobile-menu-close-icon" width="28" height="28">
-            <use href="./images/icons.svg#icon-x"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
   <div class="background">
-    <ul class="mobili-menu-list list">
-      <li class="mobile-menu-item">
-        <a href="./index.html" class="mobile-menu-link link mobile-menu-home"
-          >Home</a
-        >
-      </li>
-      <li class="mobile-menu-item">
-        <a
-          href="./shopping-list.html"
-          class="mobile-menu-link link mobile-menu-shop"
-          >Shopping list<svg
+    <div class="mobile-menu-wrapper">
+      <ul class="mobili-menu-list list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="mobile-menu-link link current">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a
+            href="./shopping-list.html"
+            class="mobile-menu-link link mobile-menu-shop"
+            >Shopping list<svg
             class="header-menu-icon-shop"
             width="20"
-            height="20"
-          >
-            <use href="./images/icons.svg#icon-uil-cart"></use></svg></a>
-      </li>
-    </ul>
+            height="20">
+            <use href="./images/icons.svg#icon-vector"></use></svg></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
+
