@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="/Bookshelf/assets/favicon-a9d2f181.ico" type="image/x-icon" />
@@ -13,8 +13,8 @@
     />
     
     <title>Bookshelf</title>
-    <script type="module" crossorigin src="/Bookshelf/assets/index-44c56998.js"></script>
-    <link rel="stylesheet" href="/Bookshelf/assets/index-a0d687c2.css">
+    <script type="module" crossorigin src="/Bookshelf/assets/index-4c0fbbb3.js"></script>
+    <link rel="stylesheet" href="/Bookshelf/assets/index-c1983b12.css">
   </head>
   <body>
     <!-- header -->
@@ -43,8 +43,7 @@
               width="20"
               height="20"
             >
-              <use href="/Bookshelf/assets/icons-be318dc5.svg#icon-vector"></use></svg
-          ></a>
+              <use href="/Bookshelf/assets/icons-be318dc5.svg#icon-vector"></use></svg></a>
         </li>
       </ul>
     </nav>
@@ -88,31 +87,34 @@
     </div>
   </div>
   <div class="background">
-    <ul class="mobili-menu-list list">
-      <li class="mobile-menu-item">
-        <a href="./index.html" class="mobile-menu-link link current">Home</a>
-      </li>
-      <li class="mobile-menu-item">
-        <a
-          href="./shopping-list.html"
-          class="mobile-menu-link link mobile-menu-shop"
-          >Shopping list<svg
-          class="header-menu-icon-shop"
-          width="20"
-          height="20">
-          <use href="/Bookshelf/assets/icons-be318dc5.svg#icon-vector"></use></svg
-        ></a>
-      </li>
-    </ul>
+    <div class="mobile-menu-wrapper">
+      <ul class="mobili-menu-list list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="mobile-menu-link link current">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a
+            href="./shopping-list.html"
+            class="mobile-menu-link link mobile-menu-shop"
+            >Shopping list<svg
+            class="header-menu-icon-shop"
+            width="20"
+            height="20">
+            <use href="/Bookshelf/assets/icons-be318dc5.svg#icon-vector"></use></svg></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
 
     <!-- main section -->
     <main>
-      <div class="">
+      
+
+      <div class="page-wrapper main-container">
         <!-- ----- Sidebar ----- -->
-        <aside class="">
+        <aside class="sidebar-element">
           <!-- ----- All categories ----- -->
           <section>
   <div class="categories-container js-container">
@@ -150,8 +152,64 @@
         </aside>
 
         <!-- ----- Main section ----- -->
-        <section class="">
-          <button class="scroll-up-btn">
+        <section class="content-element">
+          
+    <div class="home-container">
+  <h2 class="main-title">
+    Best Seller
+    <span class="main-title--last-word-static">Books</span>
+  </h2>
+  <div class="content-rendering-container">
+</div>
+</div>
+<button type="button" class="back-to-top hidden" aria-label="Scroll to top">
+  <svg class="button-icon button-icon--arrow" width="24" height="25">
+    <use href="/Bookshelf/assets/icons-be318dc5.svg#icon-chevron"></use>
+  </svg>
+</button>
+
+
+          <section>
+    <div class="container shopping-flex">
+        <h2 class="shopping-tittle"> Shopping <span class="shopping-tittle-span"> List</span> </h2>
+       
+        <ul class="shopping-book-list">
+          
+        </ul>
+
+        
+        
+        <div class="stub visually-hidden">
+            <p class="stub-text">This page is empty, add some books and proceed to order.</p>
+            <picture class="stub-img">
+                <source
+                  srcset="/Bookshelf/assets/book_tabl-1-min-a8e7c57b.png 1x, /Bookshelf/assets/book_tabl-2-min-cbdb2a4c.png 2x"
+                  media="(min-width: 1440px)"
+                />
+        
+                <source
+                  srcset="/Bookshelf/assets/book_tabl-1-min-a8e7c57b.png 1x, /Bookshelf/assets/book_tabl-2-min-cbdb2a4c.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/Bookshelf/assets/book_mobile-1-min-487658af.png 1x, /Bookshelf/assets/book_mobile-2-min-ca4cd1a6.png 2x"
+                  media="(max-width: 375px)"
+                />
+        
+                <img
+                  class="shopping-img"
+                  src="/Bookshelf/assets/book_mobile-1-min-487658af.png"
+                  alt="books  "
+                />
+              </picture>
+        </div>
+
+    </div>
+</section> -->
+        </section>
+      </div>
+      <!-- ----- Scroll up ----- -->
+      <button class="scroll-up-btn">
     <div class="inner-ellipse">
         <svg class='scroll-up-svg' width = '24' height = '24'>
             <use href = '../images/icons.svg#icon-scroll-up-arrow'></use>
@@ -183,6 +241,6 @@
 </div>
 
     
-    <script type="modul" src="./js/header.js/mobile-menu.js"></script>
+    
   </body>
 </html>
