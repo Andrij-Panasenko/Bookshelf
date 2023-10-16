@@ -15,7 +15,6 @@ export function renderCardShoppingBook(infoBookParse){
         buy_links,
         id,
       }) => {
-
         const amazonLink = buy_links.find(link => link.name === 'Amazon');
         const appleBooksLink = buy_links.find(item => item.name === 'Apple Books');
         
@@ -51,8 +50,7 @@ export function renderCardShoppingBook(infoBookParse){
     )
     .join('');
 
-shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
-
+  shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
 }
 
 // Видалення книги по натисканню кнопки
@@ -68,7 +66,7 @@ function bookDelete(infoBookParse){
    function bookDelete(event){
    const  buttonId = this.dataset.id;
 
-   const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
+  const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
 
     bookId.remove();
     }

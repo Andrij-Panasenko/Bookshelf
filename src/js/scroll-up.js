@@ -1,7 +1,7 @@
 // import throttle from 'lodash.throttle';
 import { throttle } from "./func-throttle";
 
-const scrollUpButton = document.querySelector(".scroll-up-btn");
+const scrollUpButton = document.querySelector('.scroll-up-btn');
 
 scrollUpButton.addEventListener("click", scrollToTop);
 
@@ -18,10 +18,10 @@ const throttledScrollHandler = throttle(() => {
 window.addEventListener("scroll", throttledScrollHandler);
 
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" 
-    });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 }
 
  

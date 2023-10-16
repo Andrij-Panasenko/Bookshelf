@@ -6,7 +6,7 @@ export const infoBookParse = JSON.parse(localStorage.getItem(SHOPPING_LIST_STORA
 
 // Доставння зі сховища інфо та генерація карток
 
- bookShopping.addEventListener('click', loadbook);
+bookShopping.addEventListener('click', loadbook);
 
  function loadbook(event){
     event.preventDeefalt();
