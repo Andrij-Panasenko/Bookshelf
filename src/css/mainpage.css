@@ -29,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    padding-top: 40px;
   }
 }
 
@@ -43,5 +44,6 @@
   .sidebar-element {
     flex-direction: column;
     justify-content: flex-start;
+    gap: 86px;
   }
 }
