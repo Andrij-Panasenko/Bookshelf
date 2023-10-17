@@ -26,8 +26,8 @@ export async function renderTopBooks() {
               <li class="books-list-item bestsellers-book-item">
                   <a class="book-link" href="${book_image}" aria-label="Book thumbnail">
                     <div class="book-thumb">
-                      <img class="book-image" src="${book_image}" loading="lazy" data_id=${_id} alt="${description}"/>
-                      <div class="book-image-overlay" data_id=${_id} aria-label="${title}">
+                      <img class="book-image js-book" src="${book_image}" loading="lazy" data_id=${_id} alt="${description}"/>
+                      <div class="book-image-overlay js-overlay" data_id=${_id} aria-label="${title}">
                         <p class="book-image-overlay-text">Quick view</p>
                       </div>
                     </div>

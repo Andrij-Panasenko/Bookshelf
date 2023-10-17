@@ -1,32 +1,32 @@
-import fetchBookById from '../api/get-book-by-id'
+// import fetchBookById from '../api/get-book-by-id'
 
-
-refs = {
-    categoryContainerEl: document.querySelector('.js-container'),
-    addBtnEL: document.querySelector('.modal-pop-up-btn'), 
-    bookCard: document.querySelector('.book-link'),
-    closeModalPopUpBtn: document.querySelector('[data-pop-up-close]'),
+const refs = {
+    categoryContainer: document.querySelector('.content-rendering-container'),
+    addButton: document.querySelector('.modal-pop-up-btn'), 
+    closeModalButton: document.querySelector('[data-pop-up-close]'),
     modalPopUp: document.querySelector('[data-pop-up]'),
-    modalContentEl: document.querySelector('.modal-pop-up-content'),
-
+    modalContent: document.querySelector('.modal-pop-up-content'),
 }
 
-// import getRefs from '../refs';
-// const refs = getRefs();
+function getIconPaths() {
+    return {
+      appleBooksIconPath: new URL('../../images/book-shop-min.png',import.meta.url).href,
+  
+      amazonIconPath: new URL('../../images/amazon-min.png', import.meta.url).href,
+    };
+  }
 
-// import getIconPaths from '../icon-path-refs';
-
-refs.categoryContainerEl.addEventListener('click', function (evt) {
+refs.categoryContainer.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (
     evt.target.matches('.js-book') ||
     evt.target.matches('.js-overlay')
   ) {
-    handleBookElClick(evt);
+    BookElClick(evt);
   }
 });
 
-class BooksApi {
+class Books {
   #BASE_URL = `https://books-backend.p.goit.global/books`;
   bookID = null;
 
@@ -41,7 +41,7 @@ class BooksApi {
   }
 }
 
-const BookAPI = new BooksApi();
+const Book = new Books();
 const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books'; 
 
 const shoppingList =
@@ -53,13 +53,13 @@ function addToStorage(book) {
 }
 
 
-function handleAddBookInStorage(data) {
+function AddBookInStorage(data) {
   const isBookId = shoppingList.find(
     bookInStorage => bookInStorage._id === data._id
   );
 
   if (isBookId) {
-    const dataBookID = refs.addBtnEL.getAttribute('data_id_of_book');
+    const dataBookID = refs.addButton.getAttribute('data_id_of_book');
 
     const bookIndex = shoppingList.findIndex(
       bookInStorage => bookInStorage._id === dataBookID
@@ -70,26 +70,26 @@ function handleAddBookInStorage(data) {
       SHOPPING_LIST_STORAGE_KEY,
       JSON.stringify(shoppingList)
     );
-    refs.addBtnEL.textContent = 'Add to shopping list';
+    refs.addButton.textContent = 'Add to shopping list';
     modalMessage.remove();
     return;
   }
 
   addToStorage(data);
-  refs.addBtnEL.textContent = 'Remove from the shopping list';
-  refs.addBtnEL.after(modalMessage);
+  refs.addButton.textContent = 'Remove from the shopping list';
+  refs.addButton.after(modalMessage);
 }
 
-export async function handleBookElClickToStorage(evt) {
+export async function BookElClickToStorage(evt) {
   try {
-    const data = await BookAPI.fetchBookByID();
-    handleAddBookInStorage(data);
+    const data = await Book.fetchBookByID();
+    AddBookInStorage(data);
   } catch (err) {
     console.log(err);
   }
 }
 
-refs.addBtnEL.addEventListener('click', handleBookElClickToStorage);
+refs.addButton.addEventListener('click', BookElClickToStorage);
 
 
 const modalMessage = document.createElement('p');
@@ -98,29 +98,26 @@ modalMessage.textContent =
   'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list."';
 
 //  Book card
-export async function handleBookElClick(evt) {
-  BookAPI.bookID = evt.target.attributes.data_id.value;
+export async function BookElClick(evt) {
+  Book.bookID = evt.target.attributes.data_id.value;
 
   try {
-    const data = await BookAPI.fetchBookByID();
+    const data = await Book.fetchBookByID();
     refs.modalPopUp.classList.remove('is-hidden');
-    refs.modalContentEl.innerHTML = createModal(data);
+    refs.modalContent.innerHTML = createModal(data);
     document.body.style.overflow = 'hidden';
-    refs.closeModalPopUpBtn.addEventListener(
-      'click',
-      handleModalPopUpCloseBtnClick
-    );
-    document.addEventListener('keydown', handleEscapeKeyDown);
-    document.addEventListener('click', handleBackdropClick);
+    refs.closeModalButton.addEventListener('click', ModalPopUpCloseBtnClick);
+    document.addEventListener('keydown', EscapeKeyDown);
+    document.addEventListener('click', BackdropClick);
     const isBookId = shoppingList.find(
       bookInStorage => bookInStorage._id === data._id
     );
     if (isBookId) {
-      refs.addBtnEL.textContent = 'Remove from the shopping list';
-      refs.addBtnEL.after(modalMessage);
+      refs.addButton.textContent = 'Remove from the shopping list';
+      refs.addButton.after(modalMessage);
       return;
     }
-    refs.addBtnEL.textContent = 'Add to shopping list';
+    refs.addButton.textContent = 'Add to shopping list';
     modalMessage.remove();
   } catch (err) {
     console.log(err);
@@ -135,13 +132,12 @@ export function createModal(data) {
     author,
     title,
     description,
-    buy_links: [amazon, apple, bookshop],
+    buy_links: [amazon, apple],
   } = data;
 
-  const { appleBooksIconPath, bookShopIconPath, amazonIconPath } =
+  const { appleBooksIconPath, amazonIconPath } =
     getIconPaths();
-
-  refs.addBtnEL.setAttribute('data_id_of_book', `${_id}`);
+  refs.addButton.setAttribute('data_id_of_book', `${_id}`);
 
   return `            
     <img class="modal-img" src="${book_image}" alt="book cover" />
@@ -156,38 +152,32 @@ export function createModal(data) {
         <a class="modal-shop-link" href="${apple.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Apple Books link">
           <img class="modal-shop-img shopping-shopimg apple" src="${appleBooksIconPath}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
         </a>
-        <a class="modal-shop-link" href="${bookshop.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="BookShop link">
-          <img class="modal-shop-img shopping-shopimg book-shop" src="${bookShopIconPath}" alt="BookShop link" aria-label="Buy this book on BookShop"/>
-        </a>
       </div>
     </div>
 `;
 }
 
-function handleModalPopUpCloseBtnClick(evt) {
+function ModalPopUpCloseBtnClick(evt) {
   refs.modalPopUp.classList.add('is-hidden');
   document.body.style.removeProperty('overflow');
 }
 
-function handleBackdropClick(evt) {
+function BackdropClick(evt) {
   if (evt.target == refs.modalPopUp) {
     refs.modalPopUp.classList.add('is-hidden');
     document.body.style.removeProperty('overflow');
   }
 }
 
-function handleEscapeKeyDown(evt) {
+function EscapeKeyDown(evt) {
   if (evt.key === 'Escape') {
     refs.modalPopUp.classList.add('is-hidden');
     document.body.style.removeProperty('overflow');
   }
 }
 
-refs.closeModalPopUpBtn.removeEventListener(
-  'click',
-  handleModalPopUpCloseBtnClick
-);
+refs.closeModalButton.removeEventListener('click', ModalPopUpCloseBtnClick);
 
-document.removeEventListener('click', handleBackdropClick);
+document.removeEventListener('click', BackdropClick);
 
-document.removeEventListener('keydown', handleEscapeKeyDown);
+document.removeEventListener('keydown', EscapeKeyDown);
