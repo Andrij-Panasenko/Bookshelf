@@ -11,7 +11,7 @@ export async function renderTopBooks() {
   try {
     const response = await fetchTopBooks();
     const data = response.data;
-    console.log(data);
+    // console.log(data);
     const bestsell = `
       <ul class="category-blocks-list">
         ${data

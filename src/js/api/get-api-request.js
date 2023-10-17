@@ -10,7 +10,7 @@ export function fetchTopBooks() {
     // const data = await response.json();
 
     const data = axios.get(BASE_URL);
-    console.log(data);
+    // console.log(data);
     return data;
   } catch (error) {
     warningNotify();
