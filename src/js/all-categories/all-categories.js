@@ -6,6 +6,8 @@ import { fetchBookById } from '../api/get-book-by-id';
 import { warningNotify } from '../notify';
 import { fetchSelectedBooks } from '../bestsellers/fetchSelectedBooks';
 import { renderMainTitle } from '../bestsellers/render-main-title';
+import { scrollAllow } from '../helpers/no-scroll';
+import { scrollForbidden } from '../helpers/no-scroll';
 
 const list = document.querySelector('.categories-list');
 const allCategoriesBtn = document.querySelector('.categories-btn');
@@ -25,6 +27,7 @@ fetchCatrgoryList();
 list.addEventListener('click', onCategoryClick);
 
 async function onCategoryClick(e) {
+  scrollForbidden();
   allCategoriesBtn.classList.remove('categories-btn');
   allCategoriesBtn.classList.add('item-btn');
 
@@ -38,7 +41,8 @@ async function onCategoryClick(e) {
     const id = e.target.dataset.id;
     const data = await fetchSelectedBooks(id);
     renderBooksByCategory(data);
-    renderMainTitle(id)
+    renderMainTitle(id);
+    scrollAllow();
   } catch (error) {
     warningNotify();
   }

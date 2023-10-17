@@ -3,6 +3,9 @@ import { createBookMarkup } from './oneBookMarkup';
 import getRefs from './refs.js';
 import { fetchTopBooks } from '../api/get-api-request';
 import Notiflix from 'notiflix';
+import { scrollAllow } from '../helpers/no-scroll';
+import { scrollForbidden } from '../helpers/no-scroll';
+import { warningNotify } from '../notify';
 
 
 const contentContainer = document.querySelector('.content-rendering-container');
@@ -10,6 +13,7 @@ const contentContainer = document.querySelector('.content-rendering-container');
 
 export async function renderTopBooks() {
   try {
+    scrollForbidden();
     const response = await fetchTopBooks();
     const data = response.data;
     // console.log(data);
@@ -48,11 +52,13 @@ export async function renderTopBooks() {
       </ul>`;
 
 
-      contentContainer.innerHTML = bestsell;
-      Notiflix.Loading.remove();
+    contentContainer.innerHTML = bestsell;
+    scrollAllow()
+    Notiflix.Loading.remove();
     
     } catch (error) {
     console.log("помилка");
+    warningNotify();
     }
   }
 renderTopBooks(); 

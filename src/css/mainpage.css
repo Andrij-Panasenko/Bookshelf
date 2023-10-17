@@ -1,5 +1,9 @@
 /* Точки перелому 375,  768, 1440*/
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Mobile */
 .main-container {
   max-width: 335px;
