@@ -229,6 +229,10 @@ svg {
     letter-spacing: -0.04em;
     font-style: italic;
     color: gray;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .book-thumb {
