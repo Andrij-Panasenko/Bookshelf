@@ -272,6 +272,7 @@ svg {
 }
 
 .see-more-btn {
+    /* color: var(--main-text-color); */
     margin-left: auto;
 }
 
@@ -648,4 +649,7 @@ button,
         min-width: 180px;
         height: 256px;
     }
+}
+.see-more-btn {
+    color: var( --main-text-color);
 }
