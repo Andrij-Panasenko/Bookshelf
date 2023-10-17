@@ -258,6 +258,7 @@ text-transform: uppercase;
   display: flex;
   padding: 8px 16px;
   align-items: flex-start;
+  font-weight: 700;
 }
 
 .mobile-menu.is-open {

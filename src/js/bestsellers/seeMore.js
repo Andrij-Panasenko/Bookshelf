@@ -5,11 +5,14 @@ import { fetchSelectedBooks } from './fetchSelectedBooks';
 import { renderBooksByCategory } from './renderSelectedCategory';
 // import { scrollToTop } from './back-to-top'; - //❗❗❗❗❗ НЕ РОЗКОМЕНТОВУВАТИ ❗❗❗❗❗
 import { renderMainTitle } from './render-main-title';
+import { scrollAllow } from '../helpers/no-scroll';
+import { scrollForbidden } from '../helpers/no-scroll';
 
 
 categoryContainerEl.addEventListener('click', seeMoreBtnClickHandler);
 
-async function seeMoreBtnClickHandler(e) {
+export async function seeMoreBtnClickHandler(e) {
+  scrollForbidden();
   if (!e.target.classList.contains('see-more-btn')) return;
 
   const id = e.target.dataset.id;
@@ -26,5 +29,6 @@ async function seeMoreBtnClickHandler(e) {
       activeCategoryBtn.classList.remove('active-category');
   }
   renderBooksByCategory(data);
-  scrollToTop();
+  // scrollToTop();
+  scrollAllow();
 }

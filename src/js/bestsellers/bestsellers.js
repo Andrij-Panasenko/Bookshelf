@@ -2,6 +2,10 @@ import getTopBooksArray from './fetchBooks';
 import { createBookMarkup } from './oneBookMarkup';
 import getRefs from './refs.js';
 import { fetchTopBooks } from '../api/get-api-request';
+import Notiflix from 'notiflix';
+import { scrollAllow } from '../helpers/no-scroll';
+import { scrollForbidden } from '../helpers/no-scroll';
+import { warningNotify } from '../notify';
 
 
 const contentContainer = document.querySelector('.content-rendering-container');
@@ -9,9 +13,10 @@ const contentContainer = document.querySelector('.content-rendering-container');
 
 export async function renderTopBooks() {
   try {
+    scrollForbidden();
     const response = await fetchTopBooks();
     const data = response.data;
-    console.log(data);
+    // console.log(data);
     const bestsell = `
       <ul class="category-blocks-list">
         ${data
@@ -46,10 +51,14 @@ export async function renderTopBooks() {
           .join('')}
       </ul>`;
 
-      contentContainer.innerHTML = bestsell;
+
+    contentContainer.innerHTML = bestsell;
+    scrollAllow()
+    Notiflix.Loading.remove();
     
     } catch (error) {
-      console.log("помилка");
+    console.log("помилка");
+    warningNotify();
     }
   }
 renderTopBooks(); 
