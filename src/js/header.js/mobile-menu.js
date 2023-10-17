@@ -14,15 +14,15 @@ menuOpen.classList.toggle("is-open");
 
 
 }
+//закоментував Андрій, не чіпати і не розкоментовувати
+// menuOpen.addEventListener("click", changeMenu);
 
-menuOpen.addEventListener("click", changeMenu);
-
-window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    menuOpen.setAttribute('aria-expanded', false);
-    // bodyScrollLock.enableBodyScroll(document.body);
-  });
+// window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+//     if (!e.matches) return;
+//     mobileMenu.classList.remove('is-open');
+//     menuOpen.setAttribute('aria-expanded', false);
+//     // bodyScrollLock.enableBodyScroll(document.body);
+//   });
 };
 mobileMenu();
 
