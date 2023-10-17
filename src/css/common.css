@@ -5,6 +5,12 @@
   
 }
 
+.current-page {
+  background-color: var(--secondary-accent-color);
+  padding: 8px 16px;
+  border-radius: 36px;
+  font-weight: 700;
+}
 
 @media screen and (min-width: 375px) {
   .container {
