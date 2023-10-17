@@ -1,4 +1,4 @@
-import"./support-ukraine-a72b99f7.js";const u=document.querySelector(".shopping-book-list");document.querySelector(".button-shopping-list");document.querySelector(".shopping-book");function h(o){const t=o.map(({book_image:l,title:p,list_name:c,author:g,description:n,buy_links:i,id:e})=>{const r=i.find(s=>s.name==="Amazon"),d=i.find(s=>s.name==="Apple Books");return`<li class="shopping-book" data-id="${e}">
+import"./support-ukraine-c0660e3d.js";const u=document.querySelector(".shopping-book-list");document.querySelector(".button-shopping-list");document.querySelector(".shopping-book");function h(o){const t=o.map(({book_image:l,title:p,list_name:c,author:g,description:n,buy_links:i,id:e})=>{const r=i.find(s=>s.name==="Amazon"),d=i.find(s=>s.name==="Apple Books");return`<li class="shopping-book" data-id="${e}">
         
         <div class="image-book">
              <img  class="image-book-shopping" src="${l}" alt="${n}" loading="lazy" />
