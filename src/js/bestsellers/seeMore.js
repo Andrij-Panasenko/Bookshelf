@@ -26,5 +26,5 @@ async function seeMoreBtnClickHandler(e) {
       activeCategoryBtn.classList.remove('active-category');
   }
   renderBooksByCategory(data);
-  scrollToTop();
+  // scrollToTop();
 }

@@ -2,6 +2,7 @@ import getTopBooksArray from './fetchBooks';
 import { createBookMarkup } from './oneBookMarkup';
 import getRefs from './refs.js';
 import { fetchTopBooks } from '../api/get-api-request';
+import Notiflix from 'notiflix';
 
 
 const contentContainer = document.querySelector('.content-rendering-container');
@@ -46,10 +47,12 @@ export async function renderTopBooks() {
           .join('')}
       </ul>`;
 
+
       contentContainer.innerHTML = bestsell;
+      Notiflix.Loading.remove();
     
     } catch (error) {
-      console.log("помилка");
+    console.log("помилка");
     }
   }
 renderTopBooks(); 
