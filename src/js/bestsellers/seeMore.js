@@ -9,7 +9,7 @@ import { renderMainTitle } from './render-main-title';
 
 categoryContainerEl.addEventListener('click', seeMoreBtnClickHandler);
 
-async function seeMoreBtnClickHandler(e) {
+export async function seeMoreBtnClickHandler(e) {
   if (!e.target.classList.contains('see-more-btn')) return;
 
   const id = e.target.dataset.id;

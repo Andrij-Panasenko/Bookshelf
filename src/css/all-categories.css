@@ -41,6 +41,12 @@
   text-transform: uppercase;
 }
 
+.active {
+  color: var(--primary-accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .categories-item {
   height: 18px;
 }
