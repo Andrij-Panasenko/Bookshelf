@@ -130,7 +130,7 @@ svg {
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -0.04em;
-    color: var(--text-color);
+    color: var(--main-text-color);
     margin-bottom: 40px;
     transition: color 200ms;
 }
@@ -152,7 +152,7 @@ svg {
     line-height: 18px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: gray;
+    color: var(--secondary-text-color);
     margin-bottom: 18px;
 }
 
@@ -214,7 +214,7 @@ svg {
     font-weight: bold;
     line-height: 18px;
     letter-spacing: -0.04em;
-    color: var(--text-color);
+    color: var(--main-text-color);
     max-width: 180px;
     margin-bottom: 4px;
     white-space: nowrap;
@@ -228,7 +228,7 @@ svg {
     line-height: 14px;
     letter-spacing: -0.04em;
     font-style: italic;
-    color: gray;
+    color: var(--secondary-text-color);
 }
 
 .book-thumb {
@@ -260,7 +260,7 @@ svg {
 
 .book-image-overlay-text {
     text-transform: uppercase;
-    color: blackish;
+    color: blackish;;
     font-size: 18px;
     font-weight: medium;
     opacity: 0;
@@ -272,7 +272,7 @@ svg {
 }
 
 .see-more-btn {
-    /* color: var(--main-text-color); */
+    color: var(--main-text-color);
     margin-left: auto;
 }
 
@@ -384,7 +384,7 @@ svg {
 
 .main-title {
     letter-spacing: -.04em;
-    color: var(--text-color);
+    color: var(--main-text-color);
     margin-bottom: 40px;
     font-size: 48px;
     font-weight: 700;
@@ -415,7 +415,7 @@ ul {
 .bestseller-category-title {
     letter-spacing: .03em;
     text-transform: uppercase;
-    color: #b4afaf;
+    color: var(--secondary-text-color);
     margin-bottom: 18px;
     font-size: 14px;
     line-height: 18px;
@@ -488,7 +488,7 @@ svg {
 
 .book-title {
     letter-spacing: -.04em;
-    color: var(--text-color);
+    color: var(--main-text-color);
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 180px;
@@ -501,7 +501,7 @@ svg {
 
 .book-author {
     letter-spacing: -.04em;
-    color: #b4afaf;
+    color: var(--secondary-text-color);
     font-size: 12px;
     font-style: italic;
     font-weight: 400;
