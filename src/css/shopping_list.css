@@ -1,4 +1,11 @@
+.shoplist-wrapper {
+    width: 335px;
+    margin: 0 auto;
+}
 
+.shoplist-indicator {
+    display: none;
+}
 
 .shopping-tittle{
     margin-top: 40px;
@@ -35,7 +42,7 @@ color: rgba(0, 0, 0, 0.60);
 .shopping-img {
     display: block;
     margin: auto;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 .image-book{
@@ -133,6 +140,15 @@ bottom: 14px;
 }
 
 @media screen and (min-width: 375px) {
+
+    .shoplist-wrapper {
+        width: 768px;
+    }
+
+    .stub {
+        margin: 0 auto;
+    }
+
     .stub-text{
         max-width: 244px;
        
@@ -143,12 +159,16 @@ bottom: 14px;
      }
 
      .shopping-img {
-        max-width: 265px;
+        width: 265px;
     }
 
     }
 
 @media screen and (min-width: 768px) {
+
+    .stub {
+        width: 349px;
+    }
 
     .shopping-tittle {
         font-size: 48px;
@@ -165,7 +185,7 @@ bottom: 14px;
     }
 
     .shopping-img {
-        max-width: 322px;
+        width: 322px;
     }
 
     .image-book{
@@ -213,6 +233,20 @@ bottom: 14px;
     }
 
 @media screen and (min-width: 1440px) {
+    .shoplist-indicator {
+        display: block;
+    }
+
+    .shoplist-wrapper {
+        width: 1392px;
+        display: flex;
+        gap: 40px;
+    }
+
+    .flex-container {
+        flex-grow: 1;
+    }
+
     .shopping-book-list{
         margin-left: 40px;
     }
@@ -223,10 +257,6 @@ bottom: 14px;
 
     .shopping-book{
         max-width: 996px;
-     }
-
-     .shopping-tittle{
-        margin-left: 40px;
      }
 
      .shopping-book:last-child{
