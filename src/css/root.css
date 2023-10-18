@@ -28,6 +28,9 @@
     --dark-main-text: #fff;
     --dark-theme-logo: #F3F3F3;
     --variable-primary-accent-color: #4F2EE8;
+    --modal-image-apple: grayscale(100%);
+    --modal-image-hover: drop-shadow(0,0,0,.35);
+    --modal-image-: grayscale(100%);
   }
   .theme-dark{
     --header-background-color: #202024;
@@ -35,5 +38,6 @@
     --page-background-color:#202024;
     --categories-text-color: rgba(255, 255, 255, 0.60);
     --variable-primary-accent-color: #EAC645;
-
+    --modal-image: brightness(0) invert(1);
+    --modal-image-hover: drop-shadow(225,225,225,0.35);
   }
