@@ -1,6 +1,7 @@
 .categories-container {
   max-width: 375px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  margin-bottom: 40px;
 }
 
 .categories-btn {
@@ -52,7 +53,9 @@
 }
 
 @media only screen and (width >= 768px) {
-  
+  .categories-container {
+    margin-bottom: 0;
+  }
 
   .categories-btn {
     font-size: 18px;
@@ -78,9 +81,9 @@
 }
 
 @media only screen and (width >= 1280px) {
-  .categories-container {
+  /* .categories-container {
     margin-bottom: 86px;
-  }
+  } */
 
   .categories-list {
     width: 356px;
