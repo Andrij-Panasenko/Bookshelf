@@ -1,11 +1,12 @@
-import {infoBookParse} from "../js/local-storage";
+
+import {shoppingList} from "../js/modal-pop-up/modal-pop-up"
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
 const buttonBookDelete = document.querySelector('.button-shopping-list');
 const shoppingListBook = document.querySelector('.shopping-book');
 
-export function renderCardShoppingBook(infoBookParse){
-    const markupShoppingBook = infoBookParse.map(
+export function renderCardShoppingBook(shoppingList){
+    const markupShoppingBook = shoppingList.map(
       ({
         book_image,
         title,
@@ -58,9 +59,9 @@ export function renderCardShoppingBook(infoBookParse){
 //закоментував 61 строку Андрій
 // bookDelete(infoBookParse);
 
-function bookDelete(infoBookParse){
+function bookDelete(shoppingList){
 
-    if(!(infoBookParse = []) ){
+    if(!(shoppingList = []) ){
    buttonBookDelete.addEventListener('click', bookDelete, {once: true});
 
    function bookDelete(event){
