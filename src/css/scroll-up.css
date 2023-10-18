@@ -37,6 +37,7 @@
 
 .scroll-up-svg{
     fill: var(--header-background-color);
+    /* fill: var(--main-text-color) */
 }
 
 @media screen and (min-width: 768px){

@@ -115,7 +115,7 @@
 
 .modal-book-desc {
   margin-bottom: 14px;
-  color: var(--dark-header-background);
+  color: var(--main-text-color);
 
   font-size: 14px;
   line-height: 1.29;
@@ -159,7 +159,8 @@
   line-height: 1.2;
   text-align: center;
   letter-spacing: -0.04em;
-  color: rgba(17, 17, 17, 0.5);
+  /* color: rgba(17, 17, 17, 0.5); */
+  color: var(--secondary-text-color);
 }
 
 /* Tablet and desktop */
