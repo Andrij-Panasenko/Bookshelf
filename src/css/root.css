@@ -13,6 +13,16 @@
     --dark-main-text: #fff;
     --dark-theme-logo: #F3F3F3;
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --stores-icons-filter: grayscale(100%);
+  --stores-icons-filter-hover: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+  --amazon-store-icon-filter: brightness(0) invert(1);
+  --stores-icons-filter: grayscale(100%);
+  --stores-icons-filter-hover: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+  --amazon-store-icon-filter: grayscale(100%);
+  --stores-icons-filter-hover: drop-shadow(
+    0px 3px 3px rgba(255, 255, 255, 0.35)
+  );
+  --amazon-store-icon-filter: brightness(0) invert(1);
 }
 .theme-light{
     --header-background-color: #fff;
