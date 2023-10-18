@@ -1,11 +1,12 @@
-import {infoBookParse} from "../js/local-storage";
+
+import {shoppingList} from "../js/modal-pop-up/modal-pop-up"
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
 const buttonBookDelete = document.querySelector('.button-shopping-list');
 const shoppingListBook = document.querySelector('.shopping-book');
 
-export function renderCardShoppingBook(infoBookParse){
-    const markupShoppingBook = infoBookParse.map(
+export function renderCardShoppingBook(shoppingList){
+    const markupShoppingBook = shoppingList.map(
       ({
         book_image,
         title,
@@ -13,12 +14,12 @@ export function renderCardShoppingBook(infoBookParse){
         author,
         description,
         buy_links,
-        id,
+        _id,
       }) => {
         const amazonLink = buy_links.find(link => link.name === 'Amazon');
         const appleBooksLink = buy_links.find(item => item.name === 'Apple Books');
         
-        return `<li class="shopping-book" data-id="${id}">
+        return `<li class="shopping-book" data-id="${_id}">
         
         <div class="image-book">
              <img  class="image-book-shopping" src="${book_image}" alt="${description}" loading="lazy" />
@@ -39,7 +40,7 @@ export function renderCardShoppingBook(infoBookParse){
                 </a> 
             </div>
             
-            <button type="button" class="button-shopping-list" data-id="${id}">
+            <button type="button" class="button-shopping-list" data-id="${_id}">
                 <svg class="icon-fill" width="16" height="16">
                     <use href="../images/icons.svg#icon-dump" > </use>
                 </svg>
@@ -58,9 +59,9 @@ export function renderCardShoppingBook(infoBookParse){
 //закоментував 61 строку Андрій
 // bookDelete(infoBookParse);
 
-function bookDelete(infoBookParse){
+function bookDelete(shoppingList){
 
-    if(!(infoBookParse = []) ){
+    if(!(shoppingList = []) ){
    buttonBookDelete.addEventListener('click', bookDelete, {once: true});
 
    function bookDelete(event){
