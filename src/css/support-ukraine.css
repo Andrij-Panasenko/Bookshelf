@@ -17,7 +17,7 @@
 
 @media only screen and (max-width: 767px) {
   .org-container {
-    max-width: 335px;
+    width: 335px;
     height: 460px;
     padding-left: 40px;
     padding-right: 40px;
@@ -27,7 +27,7 @@
 
 @media only screen and (min-width: 768px) {
   .org-container {
-    max-width: 335px;
+    width: 335px;
     height: 474px;
     padding-left: 40px;
     padding-right: 40px;
@@ -38,7 +38,7 @@
 
 @media screen and (min-width: 1440px) {
   .org-container {
-    max-width: 356px;
+    width: 356px;
     height: 474px;
   }
 }

@@ -43,11 +43,11 @@ class Books {
 
 const Book = new Books();
 const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books'; 
-
+export { SHOPPING_LIST_STORAGE_KEY };
 const shoppingList =
   JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY)) || [];
 
-  export {shoppingList};
+export { shoppingList };
 
 function addToStorage(book) {
   shoppingList.push(book);
