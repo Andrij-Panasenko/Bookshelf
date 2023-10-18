@@ -47,6 +47,8 @@ const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books';
 const shoppingList =
   JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY)) || [];
 
+  export {shoppingList};
+
 function addToStorage(book) {
   shoppingList.push(book);
   localStorage.setItem(SHOPPING_LIST_STORAGE_KEY, JSON.stringify(shoppingList));

@@ -4,6 +4,8 @@ import {shoppingList} from "../js/modal-pop-up/modal-pop-up"
 const shoppingBooks = document.querySelector('.shopping-book-list');
 const buttonBookDelete = document.querySelector('.button-shopping-list');
 const shoppingListBook = document.querySelector('.shopping-book');
+const bookShopping = document.querySelector('.header-menu-shop');
+const stubBook = document.querySelector('.stub');
 
 export function renderCardShoppingBook(shoppingList){
     const markupShoppingBook = shoppingList.map(
@@ -52,6 +54,14 @@ export function renderCardShoppingBook(shoppingList){
     .join('');
 
   shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
+}
+
+
+if(!shoppingList.length){
+  stubBook.classList.remove('visually-hidden');  
+}
+else{
+  renderCardShoppingBook(shoppingList);
 }
 
 // Видалення книги по натисканню кнопки
