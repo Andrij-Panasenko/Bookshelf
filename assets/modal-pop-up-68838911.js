@@ -22,4 +22,4 @@ var er=Object.defineProperty;var tr=(B,H,k)=>H in B?er(B,H,{enumerable:!0,config
         </a>
       </div>
     </div>
-`}function Yi(B){ne.modalPopUp.classList.add("is-hidden"),document.body.style.removeProperty("overflow")}function zi(B){B.target==ne.modalPopUp&&(ne.modalPopUp.classList.add("is-hidden"),document.body.style.removeProperty("overflow"))}function Vi(B){B.key==="Escape"&&(ne.modalPopUp.classList.add("is-hidden"),document.body.style.removeProperty("overflow"))}ne.closeModalButton.removeEventListener("click",Yi);document.removeEventListener("click",zi);document.removeEventListener("keydown",Vi);export{nr as c};
+`}function Yi(B){ne.modalPopUp.classList.add("is-hidden"),document.body.style.removeProperty("overflow")}function zi(B){B.target==ne.modalPopUp&&(ne.modalPopUp.classList.add("is-hidden"),document.body.style.removeProperty("overflow"))}function Vi(B){B.key==="Escape"&&(ne.modalPopUp.classList.add("is-hidden"),document.body.style.removeProperty("overflow"))}ne.closeModalButton.removeEventListener("click",Yi);document.removeEventListener("click",zi);document.removeEventListener("keydown",Vi);export{nr as c,Oe as s};
