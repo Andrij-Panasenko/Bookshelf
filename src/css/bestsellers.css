@@ -229,7 +229,7 @@ svg {
     letter-spacing: -0.04em;
     font-style: italic;
     color: var(--secondary-text-color);
-    /* color: gray; */
+    color: gray;
     max-width: 180px;
     white-space: nowrap;
     overflow: hidden;
