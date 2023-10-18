@@ -1,4 +1,4 @@
-import{s as a}from"./modal-pop-up-68838911.js";const u=document.querySelector(".shopping-book-list");document.querySelector(".button-shopping-list");document.querySelector(".shopping-book");document.querySelector(".header-menu-shop");const d=document.querySelector(".stub");function m(e){const l=e.map(({book_image:p,title:t,list_name:c,author:g,description:s,buy_links:i,_id:n})=>{const h=i.find(o=>o.name==="Amazon"),r=i.find(o=>o.name==="Apple Books");return`<li class="shopping-book" data-id="${n}">
+import{s as a}from"./modal-pop-up-ce244781.js";const u=document.querySelector(".shopping-book-list");document.querySelector(".button-shopping-list");document.querySelector(".shopping-book");document.querySelector(".header-menu-shop");const d=document.querySelector(".stub");function m(e){const l=e.map(({book_image:p,title:t,list_name:c,author:g,description:s,buy_links:i,_id:n})=>{const h=i.find(o=>o.name==="Amazon"),r=i.find(o=>o.name==="Apple Books");return`<li class="shopping-book" data-id="${n}">
         
         <div class="image-book">
              <img  class="image-book-shopping" src="${p}" alt="${s}" loading="lazy" />
