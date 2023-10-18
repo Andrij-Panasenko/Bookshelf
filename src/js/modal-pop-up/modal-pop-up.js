@@ -42,7 +42,7 @@ class Books {
 }
 
 const Book = new Books();
-const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books'; 
+export const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books'; 
 
 const shoppingList =
   JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY)) || [];
