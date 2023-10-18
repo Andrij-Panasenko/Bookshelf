@@ -37,13 +37,15 @@
 
 .item-btn:hover,
 .item-btn:focus {
-  color: var(--primary-accent-color);
+  /* color: var(--primary-accent-color); */
+  color: var(--variable-primary-accent-color);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .active {
-  color: var(--primary-accent-color);
+  /* color: var(--primary-accent-color); */
+  color: var(--variable-primary-accent-color);
   font-weight: 700;
   text-transform: uppercase;
 }
