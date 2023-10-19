@@ -1,16 +1,15 @@
 import { fetchCatrgoryList } from '../api/category-list';
-// import { renderTopBooks } from '.';
-import { seeMoreBtnClickHandler } from '../bestsellers/seeMore';
 import { renderBooksByCategory } from '../bestsellers/renderSelectedCategory';
-import { fetchBookById } from '../api/get-book-by-id';
 import { warningNotify } from '../notify';
 import { fetchSelectedBooks } from '../bestsellers/fetchSelectedBooks';
 import { renderMainTitle } from '../bestsellers/render-main-title';
 import { scrollAllow } from '../helpers/no-scroll';
 import { scrollForbidden } from '../helpers/no-scroll';
 
+
 const list = document.querySelector('.categories-list');
 const allCategoriesBtn = document.querySelector('.categories-btn');
+
 
 fetchCatrgoryList().then(resp => {
   console.log(resp);
