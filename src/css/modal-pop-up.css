@@ -144,10 +144,19 @@
 }
 
 .amazon {
-  filter: var(--amazon-store-icon-filter);
-  width: 62px;
-  height: 19px;
-  margin: 0;
+  filter: var(--modal-image)
+}
+.amazon:hover,
+.amazon:focus {
+  filter: var(--modal-image-hover);
+}
+
+.apple{
+  filter: var(----modal-image-apple);
+}
+.apple:hover,
+.apple:focus {
+  filter: var(--modal-image-hover);
 }
 
 .apple {
