@@ -41,6 +41,7 @@
     --modal-image-apple: grayscale(100%);
     --modal-image-hover: drop-shadow(0,0,0,.35);
     --modal-image-: grayscale(100%);
+    --amazon-shoplist: grayscale(100%);
   }
   .theme-dark{
     --header-background-color: #202024;
@@ -50,4 +51,5 @@
     --variable-primary-accent-color: #EAC645;
     --modal-image: brightness(0) invert(1);
     --modal-image-hover: drop-shadow(225,225,225,0.35);
+    --amazon-shoplist: grayscale(100%)invert(100%);
   }

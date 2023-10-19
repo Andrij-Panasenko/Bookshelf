@@ -43,7 +43,7 @@ export function renderCardShoppingBook(shoppingList){
                     <img  class="buy-links-icon amazon"  src="${amazon}" alt="amazon" loading="lazy" />
                 </a>  
                 <a class="buy-links" href="${appleBooksLink.url}">
-                    <img  class="buy-links-icon apple" width="16" height="16" src="${appleBook}" alt="apple book" loading="lazy" />
+                    <img  class="buy-links-icon apple" src="${appleBook}" alt="apple book" loading="lazy" />
                 </a> 
             </div>
             
