@@ -35,8 +35,6 @@ async function onCategoryClick(e) {
     if (!e.target.dataset.id) {
       return
     }
-
-    e.target.disabled = true;
      
     const id = e.target.dataset.id;
     const data = await fetchSelectedBooks(id);
