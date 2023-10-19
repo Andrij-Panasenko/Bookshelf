@@ -143,23 +143,23 @@
   filter: var(--stores-icons-filter-hover);
 }
 
-.amazon {
+.amazon-modal {
   filter: var(--modal-image)
 }
-.amazon:hover,
-.amazon:focus {
+.amazon-modal:hover,
+.amazon-modal:focus {
   filter: var(--modal-image-hover);
 }
 
-.apple{
+.apple-modal{
   filter: var(----modal-image-apple);
 }
-.apple:hover,
-.apple:focus {
+.apple-modal:hover,
+.apple-modal:focus {
   filter: var(--modal-image-hover);
 }
 
-.apple {
+.apple-modal {
   filter: var(--stores-icons-filter);
   width: 33px;
   height: 32px;

@@ -142,10 +142,10 @@ export function createModal(data) {
       <p class="modal-book-desc">${description}</p>
       <div class="modal-shops">
         <a class="modal-shop-link" href="${amazon.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Amazon link">
-          <img class="modal-shop-img amazon" src="${amazonIcon}" alt="Amazon link" aria-label="Buy this book on Amazon" />
+          <img class="modal-shop-img amazon-modal" src="${amazonIcon}" alt="Amazon link" aria-label="Buy this book on Amazon" />
         </a>
         <a class="modal-shop-link" href="${apple.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Apple Books link">
-          <img class="modal-shop-img apple" src="${aplleBooksIcon}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
+          <img class="modal-shop-img apple-modal" src="${aplleBooksIcon}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
         </a>
       </div>
     </div>

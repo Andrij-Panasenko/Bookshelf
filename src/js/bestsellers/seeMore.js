@@ -3,7 +3,6 @@ const { categoryContainerEl } = getRefs();
 
 import { fetchSelectedBooks } from './fetchSelectedBooks';
 import { renderBooksByCategory } from './renderSelectedCategory';
-// import { scrollToTop } from './back-to-top'; - //❗❗❗❗❗ НЕ РОЗКОМЕНТОВУВАТИ ❗❗❗❗❗
 import { renderMainTitle } from './render-main-title';
 import { scrollAllow } from '../helpers/no-scroll';
 import { scrollForbidden } from '../helpers/no-scroll';
@@ -29,6 +28,5 @@ export async function seeMoreBtnClickHandler(e) {
       activeCategoryBtn.classList.remove('active-category');
   }
   renderBooksByCategory(data);
-  // scrollToTop();
   scrollAllow();
 }

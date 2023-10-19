@@ -119,6 +119,10 @@ max-width: 144px;
     color: var(--secondary-text-color);
     position: absolute;
     bottom: 0;
+    width: 120px;
+    /* overflow: hidden; */
+    /* white-space: normal; */
+    /* text-overflow: ellipsis; */
 }
 
 .shopping-list-links{
@@ -127,9 +131,6 @@ right: 14px;
 bottom: 14px;
 }
 
-.buy-links-icon{
-    filter: brightness(0) invert(1);
-}
 
 .icon-fill {
     width: 16px;
@@ -137,19 +138,18 @@ bottom: 14px;
 }
 
 .amazon{
-    /* filter: grayscale(100%); */
-    filter: brightness(0) invert(1);
+    filter: var(--amazon-shoplist);
     margin-right: 8px;
     width:32px;
     height:11px;
     transition: var(--transition);
 }
 
-.amazon:hover{
-    background: url(<path-to-image>), lightgray 0.741px 0px / 97.61% 100% no-repeat;
+
+.amazon:hover,
+.amazon:focus {
     mix-blend-mode: luminosity;
-    /* box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);  */
-    filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+    filter: drop-shadow(0 3px 3px #00000026);
 }
 
 .apple{
@@ -159,11 +159,10 @@ bottom: 14px;
     transition: var(--transition);
 }
 
-.apple:hover{
-    background: url(<path-to-image>), lightgray 0px -0.889px / 100% 105.556% no-repeat;
+.apple:hover,
+.apple:focus {
     mix-blend-mode: luminosity;
-    /* box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15); */
-    filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+    filter: drop-shadow(0 3px 3px #00000026);
 }
 
 .shopping-list-links {
@@ -251,7 +250,9 @@ bottom: 14px;
         max-width: 508px;
     }
 
-
+    .shopping-list-links {
+        align-items: baseline;
+    }
 
     .amazon{
         margin-right: 8px;
@@ -317,6 +318,9 @@ bottom: 14px;
         max-width: 808px;
     }
  
+    .shopping-list-links {
+        align-items: baseline;
+    }
 
     .amazon{
         margin-right: 8px;
