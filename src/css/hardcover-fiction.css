@@ -47,11 +47,8 @@ ul{
     font-size: 12px;
     font-style: italic;
     line-height: 1.16;
-    /* overflow: hidden; */
 }
 .overley-item{
-    /* height: 76px; */
-    /* width: 18px; */
     opacity: 0;
     visibility: hidden;
     color: #111;

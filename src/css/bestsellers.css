@@ -3,34 +3,7 @@
     --accent-secondary: #{$gold};
 }
 
-html {
-    box-sizing: border-box;
-}
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-    background-color: transparent;
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
 
 button,
 [type='button'],
@@ -43,9 +16,7 @@ button,
     user-select: none;
 }
 
-address {
-    font-style: normal;
-}
+
 
 img,
 picture,
@@ -307,13 +278,10 @@ svg {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    /* align-items: center; */
 }
 
 @media screen and (min-width: 768px) {
-    /* .content-rendering-container {
-        max-width: 704px;
-    } */
+  
     .category-books-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -444,11 +412,7 @@ ul {
     display: flex;
 }
 
-/* @media screen and (min-width: 375px) {
-    .books-list-item {
-        flex-basis: calc((100% - var(--gap)*0)/1);
-    }
-} */
+
 
 .books-list-item {
     --gap: 25px;
@@ -650,15 +614,7 @@ button,
     .bestseller-category {
         max-width: 996px;
     }
-
-    .book-thumb {
-        /* max-width: 180px; */
-    }
-
-    /* .book-image {
-        min-width: 180px;
-        height: 256px;
-    } */
+ 
 }
 .see-more-btn {
     color: var( --main-text-color);

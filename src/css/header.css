@@ -286,7 +286,6 @@ text-transform: uppercase;
   height: 100%;
   z-index: 999;
   opacity: 0;
-  /* visibility: hidden; */
   pointer-events: none;
   transition: opacity var(--transition);
     

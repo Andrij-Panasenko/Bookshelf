@@ -13,12 +13,10 @@
     font-weight: 700;
     letter-spacing: -1.28px;
     color: var(--main-text-color);
-    /* line-height: 1.18; */
 }
 
 .shopping-tittle-span {
     color: var( --primary-accent-color);
-    /* color: #4F2EE8; */
 }
 .shopping-book {
     display: flex;
@@ -46,7 +44,6 @@ font-size: 14px;
 font-weight: 400;
 line-height: 1.28;
 letter-spacing: -0.28px;
-/* color: rgba(0, 0, 0, 0.60); */
 color: var(--secondary-text-color);
 }
 
@@ -120,9 +117,7 @@ max-width: 144px;
     position: absolute;
     bottom: 0;
     width: 120px;
-    /* overflow: hidden; */
-    /* white-space: normal; */
-    /* text-overflow: ellipsis; */
+
 }
 
 .shopping-list-links{
@@ -288,7 +283,6 @@ bottom: 14px;
     }
 
     .flex-container {
-        /* flex-grow: 1; */
         padding: 0;
         max-width: 996px;
     }
