@@ -1,5 +1,4 @@
 const sweet = document.querySelector("#slider");
-// console.log(sweet);
 sweet.addEventListener("change", toggleTheme);
 const mobileSweet = document.querySelector("#slid");
 // mobileSweet.addEventListener("change", toggleTheme);

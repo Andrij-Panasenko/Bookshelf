@@ -1,4 +1,3 @@
-// import fetchBookById from '../api/get-book-by-id'
 import amazonIcon from '../../images/amazon-min.png'
 import aplleBooksIcon from '../../images/book-shop-min.png'
 

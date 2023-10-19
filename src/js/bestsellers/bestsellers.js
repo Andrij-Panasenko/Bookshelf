@@ -53,7 +53,6 @@ export async function renderTopBooks() {
     Notiflix.Loading.remove();
     
     } catch (error) {
-    console.log("помилка");
     warningNotify();
     }
   }
