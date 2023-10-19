@@ -1,4 +1,3 @@
-// import throttle from 'lodash.throttle';
 import { throttle } from "./func-throttle";
 
 const scrollUpButton = document.querySelector('.scroll-up-btn');
