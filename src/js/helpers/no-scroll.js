@@ -1,7 +1,7 @@
 export function scrollForbidden() {
-  document.body.classList.add('no-scroll')
+  document.body.style.overflow = 'hidden';
 }
 
 export function scrollAllow() {
-  document.body.classList.remove('no-scroll')
+  document.body.style.removeProperty('overflow');
 }
