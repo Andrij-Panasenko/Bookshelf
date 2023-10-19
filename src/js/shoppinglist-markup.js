@@ -1,11 +1,16 @@
-
-import {shoppingList} from "../js/modal-pop-up/modal-pop-up"
+import trash from '../images/icons.svg'
+import { shoppingList } from "../js/modal-pop-up/modal-pop-up";
+import { SHOPPING_LIST_STORAGE_KEY } from '../js/modal-pop-up/modal-pop-up';
+import amazon from '../images/amazon-min.png';
+import appleBook from '../images/book-shop-min.png';
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
-const buttonBookDelete = document.querySelector('.button-shopping-list');
+// const buttonBookDelete = document.querySelector('.js-card-delete');
 const shoppingListBook = document.querySelector('.shopping-book');
 const bookShopping = document.querySelector('.header-menu-shop');
 const stubBook = document.querySelector('.stub');
+
+shoppingBooks.addEventListener('click', deleteBook);
 
 export function renderCardShoppingBook(shoppingList){
     const markupShoppingBook = shoppingList.map(
@@ -35,16 +40,16 @@ export function renderCardShoppingBook(shoppingList){
 
             <div class="shopping-list-links">
                 <a class="buy-links" href="${amazonLink.url}">
-                    <img  class="buy-links-icon amazon"  src="../images/amazon-min.png" alt="amazon" loading="lazy" />
+                    <img  class="buy-links-icon amazon"  src="${amazon}" alt="amazon" loading="lazy" />
                 </a>  
                 <a class="buy-links" href="${appleBooksLink.url}">
-                    <img  class="buy-links-icon apple" width="16" height="16" src="../images/book-shop-min.png" alt="apple book" loading="lazy" />
+                    <img  class="buy-links-icon apple" width="16" height="16" src="${appleBook}" alt="apple book" loading="lazy" />
                 </a> 
             </div>
             
-            <button type="button" class="button-shopping-list" data-id="${_id}">
-                <svg class="icon-fill" width="16" height="16">
-                    <use href="../images/icons.svg#icon-dump" > </use>
+            <button type="button" class="button-shopping-list js-card-delete" data-id="${_id}">
+                <svg class="icon-fill js-card-delete" data-id="${_id}">
+                    <use href="${trash}#icon-trash" > </use>
                 </svg>
             </button>
         </div>
@@ -53,7 +58,8 @@ export function renderCardShoppingBook(shoppingList){
     )
     .join('');
 
-  shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
+  // shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
+  shoppingBooks.innerHTML = markupShoppingBook;
 }
 
 
@@ -69,21 +75,22 @@ else{
 //закоментував 61 строку Андрій
 // bookDelete(infoBookParse);
 
-function bookDelete(shoppingList){
 
-    if(!(shoppingList = []) ){
-   buttonBookDelete.addEventListener('click', bookDelete, {once: true});
 
-   function bookDelete(event){
-   const  buttonId = this.dataset.id;
+function deleteBook(evt) {
+  if (!evt.target.classList.contains("js-card-delete")) {
+    return
+  }
+  const bookId = evt.target.dataset.id;
+  const storageData = JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY));
+  const storData = storageData.filter(item => item._id !== bookId);
 
-  const bookId = shoppingListBook.querySelector(`[data-id="${buttonId}"]`);
+  localStorage.setItem(SHOPPING_LIST_STORAGE_KEY, JSON.stringify(storData));
+  renderCardShoppingBook(storData);
 
-    bookId.remove();
-    }
+  if (!storData.length) {
+    stubBook.classList.remove('visually-hidden');
+  }
 }
-}
-
-
 
 

@@ -1,4 +1,6 @@
 // import fetchBookById from '../api/get-book-by-id'
+import amazonIcon from '../../images/amazon-min.png'
+import aplleBooksIcon from '../../images/book-shop-min.png'
 
 const refs = {
     categoryContainer: document.querySelector('.content-rendering-container'),
@@ -7,14 +9,6 @@ const refs = {
     modalPopUp: document.querySelector('[data-pop-up]'),
     modalContent: document.querySelector('.modal-pop-up-content'),
 }
-
-function getIconPaths() {
-    return {
-      appleBooksIconPath: new URL('../../images/book-shop-min.png',import.meta.url).href,
-  
-      amazonIconPath: new URL('../../images/amazon-min.png', import.meta.url).href,
-    };
-  }
 
 refs.categoryContainer.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -43,11 +37,11 @@ class Books {
 
 const Book = new Books();
 const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books'; 
-
+export { SHOPPING_LIST_STORAGE_KEY };
 const shoppingList =
   JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY)) || [];
 
-  export {shoppingList};
+export { shoppingList };
 
 function addToStorage(book) {
   shoppingList.push(book);
@@ -137,8 +131,7 @@ export function createModal(data) {
     buy_links: [amazon, apple],
   } = data;
 
-  const { appleBooksIconPath, amazonIconPath } =
-    getIconPaths();
+
   refs.addButton.setAttribute('data_id_of_book', `${_id}`);
 
   return `            
@@ -149,10 +142,10 @@ export function createModal(data) {
       <p class="modal-book-desc">${description}</p>
       <div class="modal-shops">
         <a class="modal-shop-link" href="${amazon.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Amazon link">
-          <img class="modal-shop-img shopping-shopimg amazon" src="${amazonIconPath}" alt="Amazon link" aria-label="Buy this book on Amazon" />
+          <img class="modal-shop-img amazon" src="${amazonIcon}" alt="Amazon link" aria-label="Buy this book on Amazon" />
         </a>
         <a class="modal-shop-link" href="${apple.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Apple Books link">
-          <img class="modal-shop-img shopping-shopimg apple" src="${appleBooksIconPath}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
+          <img class="modal-shop-img apple" src="${aplleBooksIcon}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
         </a>
       </div>
     </div>
