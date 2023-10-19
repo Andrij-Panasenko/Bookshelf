@@ -6,7 +6,7 @@
   height: 100%;
   background-color: rgba(17, 17, 17, 0.4);
   opacity: 1;
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 20;
   padding: 94px 15px;
 }
@@ -131,22 +131,29 @@
 }
 
 .modal-shop-img {
-  filter: grayscale(100%);
+  /* filter: var(--stores-icons-filter); */
   mix-blend-mode: luminosity;
-  transition: transform 200ms, filter 200ms;
+  transition: var(--transition);
 }
 
 .modal-shop-img:hover,
 .modal-shop-img:focus {
-  mix-blend-mode: normal;
-  transform: scale(1.1);
-  filter: var(--hover-filter);
+  /* filter: var(--stores-icons-filter); */
+  mix-blend-mode: luminosity;
+  filter: var(--stores-icons-filter-hover);
 }
 
 .amazon {
+  filter: var(--amazon-store-icon-filter);
+  width: 62px;
+  height: 19px;
+  margin: 0;
 }
 
-.book-shop {
+.apple {
+  filter: var(--stores-icons-filter);
+  width: 33px;
+  height: 32px;
 }
 
 .modal-message {
@@ -184,6 +191,11 @@
     height: 21px;
   }
 
+  .modal-pop-up-btn {
+    min-width: 500px;
+    padding: 20px 0;
+  }
+
   .modal-pop-up-content {
     display: flex;
     gap: 24px;
@@ -219,14 +231,14 @@
     margin-bottom: 0;
   }
 
-  .modal-shop-img {
+  /* .modal-shop-img {
   }
 
   .amazon {
   }
 
   .book-shop {
-  }
+  } */
 
   .modal-message {
     max-width: 324px;
