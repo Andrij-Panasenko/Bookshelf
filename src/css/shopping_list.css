@@ -73,6 +73,7 @@ color: var(--secondary-text-color);
 }
 
 .shopping-book-title{
+    color: var(--main-text-color);
     margin-bottom: 4px;
 font-size: 16px;
 font-weight: 700;
@@ -95,6 +96,7 @@ max-width: 144px;
 }
 
 .shopping-book-description {
+    color: var(--main-text-color);
     margin-top: 8px;
     font-size: 14px;
     font-weight: 400;
@@ -135,8 +137,8 @@ bottom: 14px;
 }
 
 .amazon{
-    filter: grayscale(100%);
-    /* filter: brightness(0) invert(1); треба для відображення на темній темі */
+    /* filter: grayscale(100%); */
+    filter: brightness(0) invert(1);
     margin-right: 8px;
     width:32px;
     height:11px;
@@ -146,7 +148,7 @@ bottom: 14px;
 .amazon:hover{
     background: url(<path-to-image>), lightgray 0.741px 0px / 97.61% 100% no-repeat;
     mix-blend-mode: luminosity;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15); 
+    /* box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);  */
     filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
@@ -160,7 +162,7 @@ bottom: 14px;
 .apple:hover{
     background: url(<path-to-image>), lightgray 0px -0.889px / 100% 105.556% no-repeat;
     mix-blend-mode: luminosity;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15); */
     filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
