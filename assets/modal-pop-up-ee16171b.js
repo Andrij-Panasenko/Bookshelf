@@ -15,10 +15,10 @@ var er=Object.defineProperty;var tr=(B,E,b)=>E in B?er(B,E,{enumerable:!0,config
       <p class="modal-book-desc">${o}</p>
       <div class="modal-shops">
         <a class="modal-shop-link" href="${c.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Amazon link">
-          <img class="modal-shop-img amazon" src="${Mr}" alt="Amazon link" aria-label="Buy this book on Amazon" />
+          <img class="modal-shop-img amazon-modal" src="${Mr}" alt="Amazon link" aria-label="Buy this book on Amazon" />
         </a>
         <a class="modal-shop-link" href="${h.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Apple Books link">
-          <img class="modal-shop-img apple" src="${Nr}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
+          <img class="modal-shop-img apple-modal" src="${Nr}" alt="Apple Books link"  aria-label="Buy this book on Apple Books"/>
         </a>
       </div>
     </div>
