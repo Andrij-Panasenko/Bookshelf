@@ -13,7 +13,6 @@ const allCategoriesBtn = document.querySelector('.categories-btn');
 
 
 fetchCatrgoryList().then(resp => {
-  console.log(resp);
   resp.forEach(element => {
     list.insertAdjacentHTML(
       'beforeend',
