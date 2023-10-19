@@ -5,6 +5,7 @@ import { fetchSelectedBooks } from '../bestsellers/fetchSelectedBooks';
 import { renderMainTitle } from '../bestsellers/render-main-title';
 import { scrollAllow } from '../helpers/no-scroll';
 import { scrollForbidden } from '../helpers/no-scroll';
+import { renderTopBooks } from '../bestsellers/bestsellers';
 
 
 const list = document.querySelector('.categories-list');
@@ -47,8 +48,9 @@ async function onCategoryClick(e) {
   }
 }
 
-// allCategoriesBtn.addEventListener('click', onAllCategoriesClick);
+allCategoriesBtn.addEventListener('click', onAllCategoriesClick);
 
-// function onAllCategoriesClick() {
-//   renderTopBooks();
-// }
+function onAllCategoriesClick() {
+  renderTopBooks();
+  location.reload();
+}
