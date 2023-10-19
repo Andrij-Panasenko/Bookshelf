@@ -1,6 +1,8 @@
 import trash from '../images/icons.svg'
 import { shoppingList } from "../js/modal-pop-up/modal-pop-up";
 import { SHOPPING_LIST_STORAGE_KEY } from '../js/modal-pop-up/modal-pop-up';
+import amazon from '../images/amazon-min.png';
+import appleBook from '../images/book-shop-min.png';
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
 // const buttonBookDelete = document.querySelector('.js-card-delete');
@@ -38,10 +40,10 @@ export function renderCardShoppingBook(shoppingList){
 
             <div class="shopping-list-links">
                 <a class="buy-links" href="${amazonLink.url}">
-                    <img  class="buy-links-icon amazon"  src="../images/amazon-min.png" alt="amazon" loading="lazy" />
+                    <img  class="buy-links-icon amazon"  src="${amazon}" alt="amazon" loading="lazy" />
                 </a>  
                 <a class="buy-links" href="${appleBooksLink.url}">
-                    <img  class="buy-links-icon apple" width="16" height="16" src="../images/book-shop-min.png" alt="apple book" loading="lazy" />
+                    <img  class="buy-links-icon apple" width="16" height="16" src="${appleBook}" alt="apple book" loading="lazy" />
                 </a> 
             </div>
             
