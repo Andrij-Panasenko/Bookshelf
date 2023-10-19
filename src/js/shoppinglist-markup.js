@@ -5,9 +5,6 @@ import amazon from '../images/amazon-min.png';
 import appleBook from '../images/book-shop-min.png';
 
 const shoppingBooks = document.querySelector('.shopping-book-list');
-// const buttonBookDelete = document.querySelector('.js-card-delete');
-const shoppingListBook = document.querySelector('.shopping-book');
-const bookShopping = document.querySelector('.header-menu-shop');
 const stubBook = document.querySelector('.stub');
 
 shoppingBooks.addEventListener('click', deleteBook);
@@ -58,7 +55,6 @@ export function renderCardShoppingBook(shoppingList){
     )
     .join('');
 
-  // shoppingBooks.insertAdjacentHTML('beforeend', markupShoppingBook);
   shoppingBooks.innerHTML = markupShoppingBook;
 }
 
@@ -69,12 +65,6 @@ if(!shoppingList.length){
 else{
   renderCardShoppingBook(shoppingList);
 }
-
-// Видалення книги по натисканню кнопки
-
-//закоментував 61 строку Андрій
-// bookDelete(infoBookParse);
-
 
 
 function deleteBook(evt) {
