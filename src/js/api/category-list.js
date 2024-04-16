@@ -1,18 +1,18 @@
+import axios from 'axios';
 import { warningNotify } from '../notify';
 
 //функція повертає масив об'єктів з назвами категорій книжок
 export async function fetchCatrgoryList() {
   const BASE_URL = 'https://books-backend.p.goit.global/books/category-list';
   try {
-    const reponse = await fetch(BASE_URL);
+    const response = await axios.get(BASE_URL);
 
-    if (!reponse.ok) {
+    if (!response) {
       warningNotify();
       return;
     }
-    const data = await reponse.json();
 
-    return data;
+    return response.data;
   } catch (error) {
     warningNotify();
   }
