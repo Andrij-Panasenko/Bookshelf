@@ -189,10 +189,9 @@ bottom: 14px;
 
 @media screen and (min-width: 768px) {
 
-    .flex-container {
-        max-width: 766px;
+    /* .flex-container {
         margin: 0 auto;
-    }
+    } */
 
     .shoplist-wrapper {
         width: 768px;
