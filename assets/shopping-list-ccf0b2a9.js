@@ -1,4 +1,4 @@
-import{s as p,S as r,a as b,b as f,t as $}from"./modal-pop-up-146cfb50.js";const d=document.querySelector(".shopping-book-list"),g=document.querySelector(".stub");d.addEventListener("click",y);function k(o){const a=o.map(({book_image:e,title:s,list_name:t,author:h,description:l,buy_links:c,_id:i})=>{const u=c.find(n=>n.name==="Amazon"),m=c.find(n=>n.name==="Apple Books");return`<li class="shopping-book" data-id="${i}">
+import{s as p,S as r,a as b,b as f,t as $}from"./modal-pop-up-4d34d6b4.js";const d=document.querySelector(".shopping-book-list"),g=document.querySelector(".stub");d.addEventListener("click",y);function k(o){const a=o.map(({book_image:e,title:s,list_name:t,author:h,description:l,buy_links:c,_id:i})=>{const u=c.find(n=>n.name==="Amazon"),m=c.find(n=>n.name==="Apple Books");return`<li class="shopping-book" data-id="${i}">
         
         <div class="image-book">
              <img  class="image-book-shopping" src="${e}" alt="${l}" loading="lazy" />
