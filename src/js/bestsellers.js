@@ -1,6 +1,5 @@
 import '../js/bestsellers/allBooksMarkup';
 import '../js/bestsellers/bestsellers';
-import '../js/bestsellers/fetchBooks';
 import '../js/bestsellers/fetchSelectedBooks';
 import '../js/bestsellers/oneBookMarkup';
 import '../js/bestsellers/refs';
