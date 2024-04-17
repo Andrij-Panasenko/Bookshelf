@@ -1,4 +1,3 @@
-import { fetchBookById } from './js/api/get-book-by-id';
 
 import './js/scroll-up';
 
