@@ -9,6 +9,8 @@ const contentContainer = document.querySelector('.content-rendering-container');
 
 
 export async function renderTopBooks() {
+  Notiflix.Loading.dots('Please wait');
+
   try {
     scrollForbidden();
     const response = await fetchTopBooks();
