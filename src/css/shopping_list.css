@@ -1,332 +1,315 @@
 .shoplist-wrapper {
-    width: 375px;
-    margin: 0 auto;
+  width: 375px;
+  margin: 0 auto;
 }
 
 .shoplist-indicator {
-    display: none;
+  display: none;
 }
 
-.shopping-tittle{
-    margin-bottom: 40px;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -1.28px;
-    color: var(--main-text-color);
+.shopping-tittle {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.28px;
+  color: var(--main-text-color);
 }
 
 .shopping-tittle-span {
-    color: var( --primary-accent-color);
+  color: var(--primary-accent-color);
 }
 .shopping-book {
-    display: flex;
-    margin-bottom: 20px;
-    border-radius: 16px;
-    border: 2px solid rgba(79,46,232,0.40);
-    background-color: var(--header-background-color);
-    height: 170px;
-    width: 335px;
-    padding: 14px;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background-color: var(--header-background-color);
+  height: 170px;
+  width: 335px;
+  padding: 14px;
 }
 
 .shopping-book:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.stub-text{
-display: block;
-margin: auto;
-margin-top: 120px;
-margin-bottom: 14px;
+.stub-text {
+  display: block;
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 14px;
 
-text-align: center;
-font-size: 14px;
-font-weight: 400;
-line-height: 1.28;
-letter-spacing: -0.28px;
-color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.28px;
+  color: var(--secondary-text-color);
 }
 
 .shopping-img {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
-.image-book{
-    margin-right: 14px;
+.image-book {
+  margin-right: 14px;
 }
 
-.image-book-shopping{
-    height: 142px;
-    width: 100px;
-    border-radius: 8px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
-
+.image-book-shopping {
+  height: 142px;
+  width: 100px;
+  border-radius: 8px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }
 
-.book-info{
-    position: relative;
-    flex-grow: 1;
+.book-info {
+  position: relative;
+  flex-grow: 1;
 }
 
-.shopping-book-title{
-    color: var(--main-text-color);
-    margin-bottom: 4px;
-font-size: 16px;
-font-weight: 700;
-line-height: 1.12;
-letter-spacing: -0.64px;
-text-transform: uppercase;
-max-width: 144px;
-    white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+.shopping-book-title {
+  color: var(--main-text-color);
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  max-width: 144px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.shopping-book-category{
-    
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.36px;
-    color: var(--secondary-text-color);
+.shopping-book-category {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.36px;
+  color: var(--secondary-text-color);
 }
 
 .shopping-book-description {
-    color: var(--main-text-color);
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.28;
-    letter-spacing: -0.56px;
-    max-width: 193px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    white-space: normal;
-    text-overflow: ellipsis;
+  color: var(--main-text-color);
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  max-width: 193px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
 }
 
-.shopping-book-author{
-    font-size: 12px;
-    font-style: italic;
-    line-height: 1.17;
-    letter-spacing: -0.48px;
-    color: var(--secondary-text-color);
-    position: absolute;
-    bottom: 0;
-    width: 120px;
-
+.shopping-book-author {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
+  color: var(--secondary-text-color);
+  position: absolute;
+  bottom: 0;
+  width: 120px;
 }
 
-.shopping-list-links{
-position: absolute;
-right: 14px;
-bottom: 14px;
+.shopping-list-links {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
 }
-
 
 .icon-fill {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
-.amazon{
-    filter: var(--amazon-shoplist);
-    margin-right: 8px;
-    width:32px;
-    height:11px;
-    transition: var(--transition);
+.amazon {
+  filter: var(--amazon-shoplist);
+  margin-right: 8px;
+  width: 32px;
+  height: 11px;
+  transition: var(--transition);
 }
-
 
 .amazon:hover,
 .amazon:focus {
-    mix-blend-mode: luminosity;
-    filter: drop-shadow(0 3px 3px #00000026);
+  mix-blend-mode: luminosity;
+  filter: drop-shadow(0 3px 3px #00000026);
 }
 
-.apple{
-    filter: grayscale(100%);
-    width:16px;
-    height:16px;
-    transition: var(--transition);
+.apple {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+  transition: var(--transition);
 }
 
 .apple:hover,
 .apple:focus {
-    mix-blend-mode: luminosity;
-    filter: drop-shadow(0 3px 3px #00000026);
+  mix-blend-mode: luminosity;
+  filter: drop-shadow(0 3px 3px #00000026);
 }
 
 .shopping-list-links {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: baseline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: baseline;
 }
 
-.button-shopping-list{
-    padding: 6px;
-    border: none;
-    background-color: var(--primary-accent-color);
-    border-radius: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 28px;
+.button-shopping-list {
+  padding: 6px;
+  border: none;
+  background-color: var(--primary-accent-color);
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
 }
 
 .flex-container {
-    margin: 0 auto;
-    max-width: 375px;
-    padding: 40px 20px 20px;
+  margin: 0 auto;
+  max-width: 375px;
+  padding: 40px 20px 20px;
 }
 
-
-
 @media screen and (min-width: 768px) {
+  .shoplist-wrapper {
+    width: 768px;
+  }
 
-    /* .flex-container {
-        margin: 0 auto;
-    } */
+  .icon-fill {
+    width: 18px;
+    height: 18px;
+  }
 
-    .shoplist-wrapper {
-        width: 768px;
-    }
+  .stub {
+    width: 349px;
+  }
 
-    .icon-fill {
-        width: 18px;
-        height: 18px;
-    }
+  .shopping-tittle {
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
 
-    .stub {
-        width: 349px;
-    }
+  .shopping-book {
+    width: 704px;
+    height: 213px;
+    padding: 24px;
+  }
 
-    .shopping-tittle {
-        font-size: 48px;
-        line-height: 1.08;
-        letter-spacing: -1.92px;
-    }
+  .shopping-book:last-child {
+    margin-bottom: 40px;
+  }
 
-    .shopping-book{
-        width: 704px;
-        height: 213px;
-        padding: 24px;
-     }
+  .shopping-img {
+    width: 322px;
+  }
 
-    .shopping-book:last-child{
-       margin-bottom: 40px;
-    }
+  .image-book {
+    width: 116px;
+    height: 165px;
+  }
 
-    .shopping-img {
-        width: 322px;
-    }
+  .image-book-shopping {
+    width: 116px;
+    height: 165px;
+  }
 
-    .image-book{
-        width: 116px;
-        height: 165px;
-    }
-    
-    .image-book-shopping{
-        width: 116px;
-        height: 165px;
-    }
+  .shopping-book-title {
+    max-width: 462px;
+  }
 
-    .shopping-book-title{
-        max-width: 462px;
-    }
+  .shopping-book-description {
+    max-width: 508px;
+  }
 
-    .shopping-book-description{
-        max-width: 508px;
-    }
+  .shopping-list-links {
+    align-items: baseline;
+  }
 
-    .shopping-list-links {
-        align-items: baseline;
-    }
+  .amazon {
+    margin-right: 8px;
+    width: 48px;
+    height: 15px;
+  }
 
-    .amazon{
-        margin-right: 8px;
-        width:48px;
-        height:15px;
-    }
+  .apple {
+    width: 28px;
+    height: 27px;
+  }
 
-    .apple{
-        width:28px;
-        height:27px;
-    }
-
-    .button-shopping-list{
-        width: 34px;
-        height: 34px;
-        padding: 8px;
-    }
-
-    }
+  .button-shopping-list {
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+  }
+}
 
 @media screen and (min-width: 1440px) {
-    .shoplist-indicator {
-        display: block;
-    }
+  .shoplist-indicator {
+    display: block;
+  }
 
-    .shoplist-wrapper {
-        width: 1440px;
-        padding-right: 24px;
-        padding-left: 24px;
-        display: flex;
-        column-gap: 40px;
-        padding-top: 40px;
-    }
+  .shoplist-wrapper {
+    width: 1440px;
+    padding-right: 24px;
+    padding-left: 24px;
+    display: flex;
+    column-gap: 40px;
+    padding-top: 40px;
+  }
 
-    .flex-container {
-        padding: 0;
-        max-width: 996px;
-    }
-    
-    .shopping-flex {
-        display: flex;
-    }
+  .flex-container {
+    padding: 0;
+    max-width: 996px;
+  }
 
-    .shopping-book{
-        width: 996px;
-     }
+  .shopping-flex {
+    display: flex;
+  }
 
-     .shopping-book:last-child{
-        margin-bottom: 40px;
-     }
+  .shopping-book {
+    width: 996px;
+  }
 
-     .shopping-img {
-        max-width: 322px;
-    }
+  .shopping-book:last-child {
+    margin-bottom: 40px;
+  }
 
-    .image-book-shopping{
-        width: 116px;
-    }
+  .shopping-img {
+    max-width: 322px;
+  }
 
-    .shopping-book-description{
-        margin-top: 14px;
-        max-width: 808px;
-    }
- 
-    .shopping-list-links {
-        align-items: baseline;
-    }
+  .image-book-shopping {
+    width: 116px;
+  }
 
-    .amazon{
-        margin-right: 8px;
-        width:48px;
-         height:15px;
-    }
+  .shopping-book-description {
+    margin-top: 14px;
+    max-width: 808px;
+  }
 
-    .apple{
-        width:28px;
-        height:27px;
-    }
+  .shopping-list-links {
+    align-items: baseline;
+  }
 
-    }
+  .amazon {
+    margin-right: 8px;
+    width: 48px;
+    height: 15px;
+  }
 
-
-
+  .apple {
+    width: 28px;
+    height: 27px;
+  }
+}
