@@ -1,6 +1,5 @@
 import { warningNotify } from '../notify';
 import axios from 'axios';
-import Notiflix from 'notiflix';
 
 //функція повертає масив об'єктів top-books.
 export function fetchTopBooks() {
