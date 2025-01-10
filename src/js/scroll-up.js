@@ -1,20 +1,18 @@
-import { throttle } from "./func-throttle";
+import { throttle } from './func-throttle';
 
 const scrollUpButton = document.querySelector('.scroll-up-btn');
 
-scrollUpButton.addEventListener("click", scrollToTop);
+scrollUpButton.addEventListener('click', scrollToTop);
 
 const throttledScrollHandler = throttle(() => {
   if (document.documentElement.scrollTop > 100) {
-    scrollUpButton.classList.add('show');
-    scrollUpButton.classList.remove('hide');
+    scrollUpButton.classList.replace('hide', 'show'); //remove class 'hide', add class 'show'
   } else {
-    scrollUpButton.classList.add('hide');
-    scrollUpButton.classList.remove('show');
+    scrollUpButton.classList.replace('show', 'hide'); //remove class 'show', add class 'hide'
   }
 }, 350);
 
-window.addEventListener("scroll", throttledScrollHandler);
+window.addEventListener('scroll', throttledScrollHandler);
 
 function scrollToTop() {
   window.scrollTo({
@@ -22,5 +20,3 @@ function scrollToTop() {
     behavior: 'smooth',
   });
 }
-
- 

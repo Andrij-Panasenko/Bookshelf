@@ -1,5 +1,4 @@
 .scroll-up-btn{
-    opacity: 0;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -27,12 +26,13 @@
     justify-content: center;
 }
 
-.scroll-up-btn.show {
+.show {
     opacity: 1; 
 }
 
-.scroll-up-btn.hide {
+.hide {
     opacity: 0;
+    display: none;
 }
 
 .scroll-up-svg{
